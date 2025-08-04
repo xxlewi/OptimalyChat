@@ -1,0 +1,171 @@
+@model ExportViewModel
+@{
+    ViewData["Title"] = "Export dat";
+}
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>@ViewData["Title"]</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Domů</a></li>
+                        <li class="breadcrumb-item active">Export dat</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <i class="fas fa-exclamation-triangle"></i>
+                    @TempData["ErrorMessage"]
+                </div>
+            }
+
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <i class="fas fa-check"></i>
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+
+            <!-- Export Forms -->
+            <div class="row">
+                <!-- Users Export -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-users"></i>
+                                Export uživatelů
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Exportovat uživatele ve vybraném formátu</p>
+                            
+                            <form asp-controller="Export" asp-action="ExportUsers" method="post">
+                                @Html.AntiForgeryToken()
+                                <div class="form-group">
+                                    <label>Formát:</label>
+                                    <select name="format" class="form-control" required>
+                                        @foreach (var format in Model.AvailableFormats)
+                                        {
+                                            <option value="@format">@format</option>
+                                        }
+                                    </select>
+                                </div>
+                                
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle"></i>
+                                    <small>Export obsahuje pouze základní informace o uživatelích (bez citlivých dat)</small>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-success btn-block">
+                                    <i class="fas fa-download"></i>
+                                    Exportovat uživatele
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Exports Placeholder -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-comments"></i>
+                                Export konverzací (připravuje se)
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Export AI chat konverzací bude brzy k dispozici</p>
+                            
+                            <button type="button" class="btn btn-secondary btn-block" disabled>
+                                <i class="fas fa-clock"></i>
+                                Připravuje se
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Information -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-info-circle"></i>
+                                Informace o exportu
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <i class="fas fa-file-csv fa-2x text-success mb-2"></i>
+                                        <h5>CSV</h5>
+                                        <p class="text-muted small">Univerzální formát pro tabulkové procesory</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <i class="fas fa-file-excel fa-2x text-success mb-2"></i>
+                                        <h5>Excel</h5>
+                                        <p class="text-muted small">Microsoft Excel formát</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <i class="fas fa-file-code fa-2x text-primary mb-2"></i>
+                                        <h5>JSON</h5>
+                                        <p class="text-muted small">Pro další zpracování v aplikacích</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <i class="fas fa-file-pdf fa-2x text-danger mb-2"></i>
+                                        <h5>PDF</h5>
+                                        <p class="text-muted small">Pro tisk a archivaci</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Show loading state during export
+            $('form').on('submit', function() {
+                var $btn = $(this).find('button[type="submit"]');
+                var originalText = $btn.html();
+                
+                $btn.prop('disabled', true)
+                    .html('<i class="fas fa-spinner fa-spin"></i> Exportuji...');
+                
+                // Re-enable button after 10 seconds (in case of issues)
+                setTimeout(function() {
+                    $btn.prop('disabled', false).html(originalText);
+                }, 10000);
+            });
+        });
+    </script>
+}

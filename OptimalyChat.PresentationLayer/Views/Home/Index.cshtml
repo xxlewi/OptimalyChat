@@ -1,0 +1,63 @@
+@{
+    ViewData["Title"] = "Welcome to OptimalyChat";
+    ViewData["AppName"] = "OptimalyChat";
+}
+
+<div class="d-flex align-items-center justify-content-center" style="min-height: 60vh;">
+    <div class="text-center">
+        <div class="mb-4">
+            <i class="fas fa-comments" style="font-size: 5rem; color: #17a2b8;"></i>
+        </div>
+        <h1 class="display-4 mb-3">Welcome to OptimalyChat</h1>
+        <p class="lead mb-4">
+            Your local AI-powered chat assistant with advanced project management capabilities.
+        </p>
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-brain fa-2x text-primary mb-3"></i>
+                        <h5 class="card-title">Local AI Processing</h5>
+                        <p class="card-text">Uses your local LM Studio for complete privacy and control over your data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-project-diagram fa-2x text-success mb-3"></i>
+                        <h5 class="card-title">Project Organization</h5>
+                        <p class="card-text">Organize your chats into projects with separate conversation threads.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-lock fa-2x text-warning mb-3"></i>
+                        <h5 class="card-title">Optional Encryption</h5>
+                        <p class="card-text">Protect sensitive conversations with per-project encryption settings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (!User.Identity?.IsAuthenticated ?? true)
+        {
+            <div class="mt-4">
+                <a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg">
+                    <i class="fas fa-sign-in-alt"></i> Login to Start
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="mt-4">
+                <a asp-area="" asp-controller="Chat" asp-action="Index" class="btn btn-primary btn-lg">
+                    <i class="fas fa-comments"></i> Open AI Chat
+                </a>
+            </div>
+        }
+    </div>
+</div>

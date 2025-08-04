@@ -54,7 +54,7 @@ This template implements **Clean Architecture** principles with a **3-Layer Arch
 
 ## 🎯 Layer Responsibilities
 
-### 🖥️ Presentation Layer (`OT.PresentationLayer`)
+### 🖥️ Presentation Layer (`OptimalyChat.PresentationLayer`)
 
 **Purpose**: User interface and user interaction handling
 
@@ -70,7 +70,7 @@ This template implements **Clean Architecture** principles with a **3-Layer Arch
 
 **Key Files**:
 ```
-OT.PresentationLayer/
+OptimalyChat.PresentationLayer/
 ├── Controllers/
 │   ├── HomeController.cs         # Dashboard controller
 │   ├── AccountController.cs      # Secure authentication with service layer
@@ -102,7 +102,7 @@ OT.PresentationLayer/
     └── ServiceCollectionExtensions.cs # Enterprise Identity config
 ```
 
-### 🔧 Service Layer (`OT.ServiceLayer`)
+### 🔧 Service Layer (`OptimalyChat.ServiceLayer`)
 
 **Purpose**: Business logic and application services
 
@@ -118,7 +118,7 @@ OT.PresentationLayer/
 
 **Key Files**:
 ```
-OT.ServiceLayer/
+OptimalyChat.ServiceLayer/
 ├── Services/
 │   ├── BaseService.cs            # Generic CRUD with exception handling & validation
 │   ├── UserService.cs            # User-specific business logic with validation
@@ -143,7 +143,7 @@ OT.ServiceLayer/
     └── ServiceCollectionExtensions.cs
 ```
 
-### 🗄️ Data Layer (`OT.DataLayer`)
+### 🗄️ Data Layer (`OptimalyChat.DataLayer`)
 
 **Purpose**: Data access and persistence
 
@@ -157,7 +157,7 @@ OT.ServiceLayer/
 
 **Key Files**:
 ```
-OT.DataLayer/
+OptimalyChat.DataLayer/
 ├── Entities/
 │   ├── User.cs                  # Custom user entity extending IdentityUser
 │   └── BaseEntity.cs            # Audit fields (CreatedAt, UpdatedAt, IsDeleted)
@@ -348,7 +348,7 @@ services:
   pgadmin:
     image: dpage/pgadmin4:latest
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@{{APP_NAME_LOWER}}.local
+      PGADMIN_DEFAULT_EMAIL: admin@optimalychat.local
       PGADMIN_DEFAULT_PASSWORD: admin123
     ports:
       - "{{DOCKER_PGADMIN_PORT}}:80"
@@ -486,27 +486,27 @@ The template includes **TemplateProduct** and **TemplateCategory** entities that
 
 ### Architecture Pattern Implementation
 
-**🔸 Entity Layer (`OT.DataLayer/Entities/`)**
+**🔸 Entity Layer (`OptimalyChat.DataLayer/Entities/`)**
 - ✅ **BaseEntity inheritance** with audit trails (CreatedAt, UpdatedAt, IsDeleted)
 - ✅ **Navigation properties** for EF Core relationships
 - ✅ **Computed properties** for business logic (EffectivePrice, IsOnSale, StockStatus)
 - ✅ **Virtual properties** for lazy loading and change tracking
 
-**🔸 Data Configuration (`OT.DataLayer/Configurations/`)**
+**🔸 Data Configuration (`OptimalyChat.DataLayer/Configurations/`)**
 - ✅ **IEntityTypeConfiguration<T>** implementation
 - ✅ **Database constraints** (check constraints, unique indexes)
 - ✅ **Relationship configuration** with proper delete behavior
 - ✅ **Seed data** for development and testing
 - ✅ **Column mappings** with precision and length constraints
 
-**🔸 Service Layer (`OT.ServiceLayer/`)**
+**🔸 Service Layer (`OptimalyChat.ServiceLayer/`)**
 - ✅ **BaseService<TEntity, TDto, TKey>** generic pattern
 - ✅ **Business logic validation** with custom exceptions
 - ✅ **AutoMapper profiles** for Entity ↔ DTO transformation
 - ✅ **Pagination support** with PagedResult<T>
 - ✅ **Repository pattern** usage with Unit of Work
 
-**🔸 Presentation Layer (`OT.PresentationLayer/`)**
+**🔸 Presentation Layer (`OptimalyChat.PresentationLayer/`)**
 - ✅ **MVC Controller** with proper error handling
 - ✅ **ViewModels** with data annotations for validation
 - ✅ **AdminLTE Views** with responsive design

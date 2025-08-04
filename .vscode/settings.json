@@ -1,5 +1,5 @@
 {
-    "dotnet.defaultSolution": "OptimalyTemplate.sln",
+    "dotnet.defaultSolution": "OptimalyChat.sln",
     "omnisharp.enableEditorConfigSupport": true,
     "omnisharp.enableRoslynAnalyzers": true,
     "files.exclude": {

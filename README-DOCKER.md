@@ -31,7 +31,7 @@ This project includes a **template-based** Docker Compose configuration that gen
 
 4. **Apply Entity Framework migrations:**
    ```bash
-   cd OT.PresentationLayer
+   cd OptimalyChat.PresentationLayer
    dotnet ef database update
    ```
 
@@ -76,7 +76,7 @@ The following tokens are replaced during generation:
 | Token | Source | Description |
 |-------|--------|-------------|
 | `{{APP_NAME}}` | `<AppName>` | Application name |
-| `{{APP_NAME_LOWER}}` | `<AppName>` (lowercase) | For container names |
+| `optimalychat` | `<AppName>` (lowercase) | For container names |
 | `{{DOCKER_SQLSERVER_PORT}}` | `<DockerSqlServerPort>` | SQL Server port |
 | `{{DOCKER_DB_NAME}}` | `<DockerDbName>` | Database name |
 | `{{DOCKER_DB_PASSWORD}}` | `<DockerDbPassword>` | SA password |
@@ -94,7 +94,7 @@ Connection details are dynamically generated. After running the generation scrip
 ```bash
 docker-compose -f docker-compose.generated.yml down -v
 docker-compose -f docker-compose.generated.yml up -d
-cd OT.PresentationLayer
+cd OptimalyChat.PresentationLayer
 dotnet ef database update
 ```
 

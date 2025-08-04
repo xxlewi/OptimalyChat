@@ -7,9 +7,9 @@
             "request": "launch",
             "preLaunchTask": "kill-and-build",
             "postDebugTask": "open-browser",
-            "program": "${workspaceFolder}/OT.PresentationLayer/bin/Debug/net9.0/OT.PresentationLayer.dll",
+            "program": "${workspaceFolder}/OptimalyChat.PresentationLayer/bin/Debug/net9.0/OptimalyChat.PresentationLayer.dll",
             "args": ["--urls", "http://localhost:5020"],
-            "cwd": "${workspaceFolder}/OT.PresentationLayer",
+            "cwd": "${workspaceFolder}/OptimalyChat.PresentationLayer",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
@@ -17,7 +17,9 @@
                 "uriFormat": "%s"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_DETAILEDERRORS": "true",
+                "ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS": "true"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"

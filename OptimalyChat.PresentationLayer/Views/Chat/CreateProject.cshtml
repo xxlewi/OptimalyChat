@@ -1,0 +1,76 @@
+@model OptimalyChat.PresentationLayer.ViewModels.CreateProjectViewModel
+@{
+    ViewData["Title"] = Model.PageTitle;
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">@Model.PageTitle</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="CreateProject" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                    
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label"></label>
+                        <input asp-for="Name" class="form-control" autofocus />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label asp-for="Description" class="form-label"></label>
+                        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input asp-for="IsEncrypted" class="form-check-input" type="checkbox" id="isEncrypted" />
+                            <label asp-for="IsEncrypted" class="form-check-label" for="isEncrypted">
+                                Enable encryption for sensitive data
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3" id="encryptionLevelGroup" style="display: none;">
+                        <label asp-for="EncryptionLevel" class="form-label"></label>
+                        <select asp-for="EncryptionLevel" class="form-select">
+                            <option value="None">None - No encryption</option>
+                            <option value="MessagesOnly">Messages Only - Encrypt chat messages</option>
+                            <option value="Full">Full - Encrypt all project data</option>
+                        </select>
+                        <span asp-validation-for="EncryptionLevel" class="text-danger"></span>
+                        <div class="form-text">
+                            <i class="bi bi-info-circle"></i> Encryption protects your data but cannot be changed later.
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i> Create Project
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        document.getElementById('isEncrypted').addEventListener('change', function() {
+            var encryptionLevelGroup = document.getElementById('encryptionLevelGroup');
+            if (this.checked) {
+                encryptionLevelGroup.style.display = 'block';
+                document.getElementById('EncryptionLevel').value = 'MessagesOnly';
+            } else {
+                encryptionLevelGroup.style.display = 'none';
+                document.getElementById('EncryptionLevel').value = 'None';
+            }
+        });
+    </script>
+}

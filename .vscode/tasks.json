@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/OptimalyTemplate.sln",
+                "${workspaceFolder}/OptimalyChat.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/OptimalyTemplate.sln",
+                "${workspaceFolder}/OptimalyChat.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/OT.PresentationLayer"
+                "${workspaceFolder}/OptimalyChat.PresentationLayer"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -43,7 +43,7 @@
             "command": "bash",
             "args": [
                 "-c",
-                "pkill -f 'dotnet.*OT.PresentationLayer' || true"
+                "pkill -f 'dotnet.*OptimalyChat.PresentationLayer' || true"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -61,7 +61,7 @@
         {
             "label": "kill-and-build",
             "type": "shell",
-            "command": "./kill-dotnet.sh && dotnet clean OptimalyTemplate.sln && dotnet build OptimalyTemplate.sln",
+            "command": "./kill-dotnet.sh && rm -rf **/bin **/obj && dotnet clean OptimalyChat.sln && dotnet build OptimalyChat.sln --no-incremental",
             "options": {
                 "cwd": "${workspaceFolder}"
             },

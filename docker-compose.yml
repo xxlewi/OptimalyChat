@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: {{APP_NAME_LOWER}}-postgres
+    container_name: optimalychat-postgres
     restart: unless-stopped
     environment:
       POSTGRES_USER: {{DOCKER_DB_USER}}
@@ -23,10 +23,10 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:latest
-    container_name: {{APP_NAME_LOWER}}-pgadmin
+    container_name: optimalychat-pgadmin
     restart: unless-stopped
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@{{APP_NAME_LOWER}}.local
+      PGADMIN_DEFAULT_EMAIL: admin@optimalychat.local
       PGADMIN_DEFAULT_PASSWORD: admin123
       PGADMIN_CONFIG_SERVER_MODE: 'False'
       PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: 'False'
@@ -40,10 +40,10 @@ services:
 
 volumes:
   postgres-data:
-    name: {{APP_NAME_LOWER}}_postgres_data
+    name: optimalychat_postgres_data
   pgadmin-data:
-    name: {{APP_NAME_LOWER}}_pgadmin_data
+    name: optimalychat_pgadmin_data
 
 networks:
   default:
-    name: {{APP_NAME_LOWER}}_network
+    name: optimalychat_network

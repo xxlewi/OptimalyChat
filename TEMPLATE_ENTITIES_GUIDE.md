@@ -11,7 +11,7 @@ The template includes complete CRUD examples:
 
 ## 🏗️ Architecture Pattern
 
-### 1. Data Layer (`OT.DataLayer`)
+### 1. Data Layer (`OptimalyChat.DataLayer`)
 ```
 📁 Entities/
 ├── YourEntity.cs              # Entity with BaseEntity inheritance
@@ -22,7 +22,7 @@ The template includes complete CRUD examples:
 └── YourLookupConfiguration.cs # Lookup configuration
 ```
 
-### 2. Service Layer (`OT.ServiceLayer`)
+### 2. Service Layer (`OptimalyChat.ServiceLayer`)
 ```
 📁 DTOs/
 ├── YourEntityDto.cs           # Data transfer objects
@@ -34,7 +34,7 @@ The template includes complete CRUD examples:
 ├── YourEntityService.cs       # Business logic implementation
 ```
 
-### 3. Presentation Layer (`OT.PresentationLayer`)
+### 3. Presentation Layer (`OptimalyChat.PresentationLayer`)
 ```
 📁 ViewModels/
 ├── YourEntityViewModel.cs     # UI-specific models
@@ -102,9 +102,9 @@ public DbSet<Customer> Customers { get; set; }
 
 ### Step 4: Create Migration
 ```bash
-cd OT.DataLayer
-dotnet ef migrations add AddCustomer --startup-project ../OT.PresentationLayer
-dotnet ef database update --startup-project ../OT.PresentationLayer
+cd OptimalyChat.DataLayer
+dotnet ef migrations add AddCustomer --startup-project ../OptimalyChat.PresentationLayer
+dotnet ef database update --startup-project ../OptimalyChat.PresentationLayer
 ```
 
 ### Step 5: Create DTO
@@ -250,23 +250,23 @@ When ready for production:
 1. **Remove template files:**
 ```bash
 # Entities
-rm OT.DataLayer/Entities/TemplateProduct.cs
-rm OT.DataLayer/Entities/TemplateCategory.cs
-rm OT.DataLayer/Configurations/TemplateProductConfiguration.cs
-rm OT.DataLayer/Configurations/TemplateCategoryConfiguration.cs
+rm OptimalyChat.DataLayer/Entities/TemplateProduct.cs
+rm OptimalyChat.DataLayer/Entities/TemplateCategory.cs
+rm OptimalyChat.DataLayer/Configurations/TemplateProductConfiguration.cs
+rm OptimalyChat.DataLayer/Configurations/TemplateCategoryConfiguration.cs
 
 # Service Layer
-rm OT.ServiceLayer/DTOs/TemplateProductDto.cs
-rm OT.ServiceLayer/DTOs/TemplateCategoryDto.cs
-rm OT.ServiceLayer/Interfaces/ITemplateProductService.cs
-rm OT.ServiceLayer/Interfaces/ITemplateCategoryService.cs
-rm OT.ServiceLayer/Services/TemplateProductService.cs
-rm OT.ServiceLayer/Services/TemplateCategoryService.cs
+rm OptimalyChat.ServiceLayer/DTOs/TemplateProductDto.cs
+rm OptimalyChat.ServiceLayer/DTOs/TemplateCategoryDto.cs
+rm OptimalyChat.ServiceLayer/Interfaces/ITemplateProductService.cs
+rm OptimalyChat.ServiceLayer/Interfaces/ITemplateCategoryService.cs
+rm OptimalyChat.ServiceLayer/Services/TemplateProductService.cs
+rm OptimalyChat.ServiceLayer/Services/TemplateCategoryService.cs
 
 # Presentation Layer
-rm OT.PresentationLayer/ViewModels/TemplateProductViewModel.cs
-rm OT.PresentationLayer/Controllers/TemplateProductsController.cs
-rm -rf OT.PresentationLayer/Views/TemplateProducts/
+rm OptimalyChat.PresentationLayer/ViewModels/TemplateProductViewModel.cs
+rm OptimalyChat.PresentationLayer/Controllers/TemplateProductsController.cs
+rm -rf OptimalyChat.PresentationLayer/Views/TemplateProducts/
 ```
 
 2. **Remove from DbContext:**
@@ -295,8 +295,8 @@ services.AddScoped<ITemplateProductService, TemplateProductService>();
 
 6. **Create migration:**
 ```bash
-dotnet ef migrations add RemoveTemplateEntities --startup-project ../OT.PresentationLayer
-dotnet ef database update --startup-project ../OT.PresentationLayer
+dotnet ef migrations add RemoveTemplateEntities --startup-project ../OptimalyChat.PresentationLayer
+dotnet ef database update --startup-project ../OptimalyChat.PresentationLayer
 ```
 
 ## 🎯 Best Practices Summary

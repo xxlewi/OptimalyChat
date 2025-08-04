@@ -1,0 +1,200 @@
+@model OptimalyChat.PresentationLayer.ViewModels.ChatViewModel
+@{
+    ViewData["Title"] = Model.PageTitle;
+}
+
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <!-- Sidebar with projects and conversations -->
+        <div class="col-md-3 border-end bg-light p-0">
+            <!-- Projects dropdown -->
+            <div class="p-3 border-bottom">
+                <div class="dropdown w-100">
+                    <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-folder2-open"></i> @(Model.CurrentProject?.Name ?? "Select Project")
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                        @foreach (var project in Model.Projects)
+                        {
+                            <li>
+                                <a class="dropdown-item @(project.Id == Model.CurrentProject?.Id ? "active" : "")" 
+                                   href="@Url.Action("Index", new { projectId = project.Id })">
+                                    @project.Name
+                                    @if (project.IsEncrypted)
+                                    {
+                                        <i class="bi bi-lock-fill ms-2"></i>
+                                    }
+                                </a>
+                            </li>
+                        }
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="@Url.Action("CreateProject")">
+                                <i class="bi bi-plus-circle"></i> New Project
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conversations list -->
+            <div class="conversations-list overflow-auto" style="height: calc(100vh - 200px);">
+                @if (Model.CurrentProject != null)
+                {
+                    <div class="p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="mb-0">Conversations</h6>
+                            <button class="btn btn-sm btn-primary" id="newConversation">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="list-group">
+                            @foreach (var conversation in Model.Conversations)
+                            {
+                                <a href="@Url.Action("Index", new { projectId = Model.CurrentProject.Id, conversationId = conversation.Id })" 
+                                   class="list-group-item list-group-item-action @(conversation.Id == Model.CurrentConversation?.Id ? "active" : "")">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">@conversation.Title</h6>
+                                        <small>@conversation.LastMessageAt?.ToString("MMM dd")</small>
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(conversation.LastMessagePreview))
+                                    {
+                                        <p class="mb-1 text-truncate small">@conversation.LastMessagePreview</p>
+                                    }
+                                    <small>@conversation.MessageCount messages</small>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="p-3 text-center text-muted">
+                        <p>Select a project to view conversations</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Main chat area -->
+        <div class="col-md-9 p-0 d-flex flex-column h-100">
+            @if (Model.CurrentConversation != null)
+            {
+                <!-- Conversation header -->
+                <div class="border-bottom p-3 bg-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0" id="conversationTitle">@Model.CurrentConversation.Title</h4>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary" id="editTitle">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" id="deleteConversation">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages area -->
+                <div class="flex-grow-1 overflow-auto p-3" id="messagesContainer">
+                    @foreach (var message in Model.Messages)
+                    {
+                        <div class="message mb-3 @(message.Role == "user" ? "text-end" : "")">
+                            <div class="d-inline-block p-3 rounded @(message.Role == "user" ? "bg-primary text-white" : "bg-light")" 
+                                 style="max-width: 70%;">
+                                <div class="mb-1">
+                                    <strong>@(message.Role == "user" ? "You" : "AI")</strong>
+                                    <small class="ms-2 @(message.Role == "user" ? "text-white-50" : "text-muted")">
+                                        @message.CreatedAt.ToString("HH:mm")
+                                    </small>
+                                </div>
+                                <div class="message-content">@message.Content</div>
+                                @if (message.TokenCount > 0)
+                                {
+                                    <small class="d-block mt-1 @(message.Role == "user" ? "text-white-50" : "text-muted")">
+                                        @message.TokenCount tokens
+                                        @if (message.ResponseTimeMs.HasValue)
+                                        {
+                                            <span>• @message.ResponseTimeMs ms</span>
+                                        }
+                                    </small>
+                                }
+                            </div>
+                        </div>
+                    }
+                    <div id="typingIndicator" class="message mb-3 d-none">
+                        <div class="d-inline-block p-3 rounded bg-light">
+                            <div class="typing-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input area -->
+                <div class="border-top p-3 bg-white">
+                    <form id="messageForm" class="d-flex gap-2">
+                        <textarea id="messageInput" 
+                                  class="form-control" 
+                                  rows="2" 
+                                  placeholder="Type your message..." 
+                                  autofocus></textarea>
+                        <button type="submit" class="btn btn-primary" id="sendButton">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                </div>
+            }
+            else if (Model.CurrentProject != null)
+            {
+                <!-- No conversation selected -->
+                <div class="d-flex align-items-center justify-content-center h-100">
+                    <div class="text-center text-muted">
+                        <i class="bi bi-chat-square-text display-1"></i>
+                        <p class="mt-3">Select a conversation or create a new one to start chatting</p>
+                        <button class="btn btn-primary" id="newConversationCenter">
+                            <i class="bi bi-plus-circle"></i> New Conversation
+                        </button>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <!-- No project selected -->
+                <div class="d-flex align-items-center justify-content-center h-100">
+                    <div class="text-center text-muted">
+                        <i class="bi bi-folder2-open display-1"></i>
+                        <p class="mt-3">Select a project to start</p>
+                        <a href="@Url.Action("CreateProject")" class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i> Create Project
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Connection status alert -->
+@if (!Model.IsConnected)
+{
+    <div class="alert alert-warning alert-dismissible fade show position-fixed bottom-0 end-0 m-3" role="alert">
+        <i class="bi bi-exclamation-triangle"></i> @Model.ConnectionError
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@section Scripts {
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+    <script>
+        window.chatConfig = {
+            hubUrl: '/chathub',
+            projectId: @(Model.CurrentProject?.Id ?? 0),
+            conversationId: @(Model.CurrentConversation?.Id ?? 0)
+        };
+    </script>
+}

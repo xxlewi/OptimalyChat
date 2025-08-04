@@ -1,10 +1,10 @@
-# 🚀 OptimalyTemplate
+# 🚀 OptimalyChat
 
 **Modern .NET 9 enterprise application template** with clean 3-layer architecture, PostgreSQL, and AdminLTE UI.
 
 ## 🎯 What is this?
 
-OptimalyTemplate is a **production-ready project template** for building scalable .NET web applications. It provides:
+OptimalyChat is a **production-ready project template** for building scalable .NET web applications. It provides:
 
 - ✅ **Clean 3-Layer Architecture** (Presentation → Service → Data)
 - ✅ **Generic Repository & Unit of Work** patterns with true generic support
@@ -47,7 +47,7 @@ Perfect for **enterprise applications**, **microservices**, or any project requi
 **Fastest way to start your project:**
 ```bash
 # Fork or clone this repository  
-git clone https://github.com/xxlewi/OptimalyTemplate.git YourAppName
+git clone https://github.com/xxlewi/OptimalyChat.git YourAppName
 cd YourAppName
 
 # Rename everything automatically (interactive)
@@ -65,8 +65,8 @@ dotnet run --project YourAppName.PresentationLayer
 
 ### 1. Fork & Clone
 ```bash
-git clone https://github.com/xxlewi/OptimalyTemplate.git
-cd OptimalyTemplate
+git clone https://github.com/xxlewi/OptimalyChat.git
+cd OptimalyChat
 ```
 
 ### 2. Customize Your Project
@@ -91,7 +91,7 @@ docker-compose -f docker-compose.generated.yml up -d
 ```
 
 ### 5. Update Connection String
-Copy the generated connection string to `OT.PresentationLayer/appsettings.json`:
+Copy the generated connection string to `OptimalyChat.PresentationLayer/appsettings.json`:
 ```json
 {
   "ConnectionStrings": {
@@ -102,10 +102,10 @@ Copy the generated connection string to `OT.PresentationLayer/appsettings.json`:
 
 ### 6. Run Migrations & Start App
 ```bash
-cd OT.DataLayer
-dotnet ef database update --startup-project ../OT.PresentationLayer
+cd OptimalyChat.DataLayer
+dotnet ef database update --startup-project ../OptimalyChat.PresentationLayer
 
-cd ../OT.PresentationLayer
+cd ../OptimalyChat.PresentationLayer
 dotnet run
 ```
 
@@ -155,7 +155,7 @@ dotnet run
 ## 🛠️ What's Included
 
 ```
-OptimalyTemplate/
+OptimalyChat/
 ├── 🎨 AdminLTE 3.2.0 UI Framework
 ├── 🗄️ PostgreSQL + pgAdmin Docker Setup  
 ├── 🏗️ Clean 3-Layer Architecture
@@ -194,7 +194,7 @@ OptimalyTemplate/
 
 ### Complete CRUD Reference Implementation
 
-OptimalyTemplate includes a **complete template entity system** demonstrating best practices for implementing CRUD operations across all architectural layers.
+OptimalyChat includes a **complete template entity system** demonstrating best practices for implementing CRUD operations across all architectural layers.
 
 **🔍 Live Demo**: [http://localhost:5020/TemplateProducts](http://localhost:5020/TemplateProducts)
 
@@ -217,7 +217,7 @@ OptimalyTemplate includes a **complete template entity system** demonstrating be
 
 ### Architecture Layers Covered
 
-**🔸 Entity Layer** (`OT.DataLayer/Entities/`)
+**🔸 Entity Layer** (`OptimalyChat.DataLayer/Entities/`)
 ```csharp
 public class TemplateProduct : BaseEntity
 {
@@ -233,18 +233,18 @@ public class TemplateProduct : BaseEntity
 }
 ```
 
-**🔸 Data Layer** (`OT.DataLayer/Configurations/`)
+**🔸 Data Layer** (`OptimalyChat.DataLayer/Configurations/`)
 - EF Core configurations with indexes, constraints, and relationships
 - Seed data for development
 - Database migrations
 
-**🔸 Service Layer** (`OT.ServiceLayer/`)
+**🔸 Service Layer** (`OptimalyChat.ServiceLayer/`)
 - DTOs with computed properties for UI
 - Business logic services with validation
 - AutoMapper profiles for Entity ↔ DTO mapping
 - Comprehensive error handling
 
-**🔸 Presentation Layer** (`OT.PresentationLayer/`)
+**🔸 Presentation Layer** (`OptimalyChat.PresentationLayer/`)
 - ViewModels with validation attributes
 - Controllers with proper error handling
 - AdminLTE views with pagination and filtering
@@ -307,9 +307,9 @@ Files to remove:
 
 ### Adding a New Entity (e.g., Customer)
 
-1. **Create Entity** (`OT.DataLayer/Entities/Customer.cs`):
+1. **Create Entity** (`OptimalyChat.DataLayer/Entities/Customer.cs`):
 ```csharp
-namespace OT.DataLayer.Entities;
+namespace OptimalyChat.DataLayer.Entities;
 
 public class Customer : BaseEntity
 {
@@ -322,7 +322,7 @@ public class Customer : BaseEntity
 }
 ```
 
-2. **Create Entity Configuration** (`OT.DataLayer/Configurations/CustomerConfiguration.cs`):
+2. **Create Entity Configuration** (`OptimalyChat.DataLayer/Configurations/CustomerConfiguration.cs`):
 ```csharp
 public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
 {
@@ -348,14 +348,14 @@ public DbSet<Customer> Customers { get; set; }
 
 4. **Create Migration**:
 ```bash
-cd OT.DataLayer
-dotnet ef migrations add AddCustomer --startup-project ../OT.PresentationLayer
-dotnet ef database update --startup-project ../OT.PresentationLayer
+cd OptimalyChat.DataLayer
+dotnet ef migrations add AddCustomer --startup-project ../OptimalyChat.PresentationLayer
+dotnet ef database update --startup-project ../OptimalyChat.PresentationLayer
 ```
 
-5. **Create DTO** (`OT.ServiceLayer/DTOs/CustomerDto.cs`):
+5. **Create DTO** (`OptimalyChat.ServiceLayer/DTOs/CustomerDto.cs`):
 ```csharp
-namespace OT.ServiceLayer.DTOs;
+namespace OptimalyChat.ServiceLayer.DTOs;
 
 public class CustomerDto : BaseDto
 {
@@ -367,12 +367,12 @@ public class CustomerDto : BaseDto
 }
 ```
 
-6. **Update AutoMapper** (`OT.ServiceLayer/Mapping/EntityToDtoMappingProfile.cs`):
+6. **Update AutoMapper** (`OptimalyChat.ServiceLayer/Mapping/EntityToDtoMappingProfile.cs`):
 ```csharp
 CreateMap<Customer, CustomerDto>().ReverseMap();
 ```
 
-7. **Create Service Interface** (`OT.ServiceLayer/Interfaces/ICustomerService.cs`):
+7. **Create Service Interface** (`OptimalyChat.ServiceLayer/Interfaces/ICustomerService.cs`):
 ```csharp
 public interface ICustomerService : IBaseService<CustomerDto>
 {
@@ -380,7 +380,7 @@ public interface ICustomerService : IBaseService<CustomerDto>
 }
 ```
 
-8. **Create Service Implementation** (`OT.ServiceLayer/Services/CustomerService.cs`):
+8. **Create Service Implementation** (`OptimalyChat.ServiceLayer/Services/CustomerService.cs`):
 ```csharp
 public class CustomerService : BaseService<Customer, CustomerDto, int>, ICustomerService
 {

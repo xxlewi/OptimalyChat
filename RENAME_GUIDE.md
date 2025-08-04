@@ -1,6 +1,6 @@
 # 🔄 Project Rename Guide
 
-This guide explains how to rename OptimalyTemplate to your own project name using the provided automated scripts.
+This guide explains how to rename OptimalyChat to your own project name using the provided automated scripts.
 
 ## 📋 Prerequisites
 
@@ -30,13 +30,13 @@ chmod +x rename-project.sh
 
 ### 1. **Creates Backup**
 - Automatic backup created before any changes
-- Saved as `../OptimalyTemplate_backup_YYYYMMDD_HHMMSS`
+- Saved as `../OptimalyChat_backup_YYYYMMDD_HHMMSS`
 
 ### 2. **Renames Files & Directories**
-- `OptimalyTemplate.sln` → `YourAppName.sln`
-- `OT.DataLayer/` → `YourAppName.DataLayer/`
-- `OT.ServiceLayer/` → `YourAppName.ServiceLayer/`
-- `OT.PresentationLayer/` → `YourAppName.PresentationLayer/`
+- `OptimalyChat.sln` → `YourAppName.sln`
+- `OptimalyChat.DataLayer/` → `YourAppName.DataLayer/`
+- `OptimalyChat.ServiceLayer/` → `YourAppName.ServiceLayer/`
+- `OptimalyChat.PresentationLayer/` → `YourAppName.PresentationLayer/`
 - `*.csproj` files renamed accordingly
 
 ### 3. **Updates File Contents**
@@ -50,10 +50,10 @@ Updates the following file types:
 - `*.cshtml` - Razor view files
 
 **Replacements performed:**
-- `OptimalyTemplate` → `YourAppName`
-- `OT.` → `YourAppName.`
-- `{{APP_NAME_LOWER}}` → `yourappname`
-- `optimalytemplate` → `yourappname`
+- `OptimalyChat` → `YourAppName`
+- `OptimalyChat.` → `YourAppName.`
+- `optimalychat` → `yourappname`
+- `optimalychat` → `yourappname`
 
 ### 4. **Updates Database Configuration**
 - Connection string updated in `appsettings.json`
@@ -219,13 +219,13 @@ ports:
 - [x] Database connection works
 - [x] Application starts (`dotnet run`)
 - [x] Web interface accessible at http://localhost:5020
-- [x] No remaining `OT.` or `OptimalyTemplate` references
+- [x] No remaining `OptimalyChat.` or `OptimalyChat` references
 - [x] Docker containers start successfully
 - [x] pgAdmin accessible and configured
 
 ## ✅ Verified Test Results
 
-**Test Case: OptimalyTemplate → CoolShop**
+**Test Case: OptimalyChat → CoolShop**
 - ✅ **Rename Duration**: 30 seconds
 - ✅ **Files Updated**: 167+ files across all layers
 - ✅ **Build Result**: Success (0 errors, 1 warning)
@@ -237,10 +237,10 @@ ports:
 
 **Generated Output:**
 ```
-OptimalyTemplate.sln → CoolShop.sln
-OT.DataLayer → CoolShop.DataLayer  
-OT.ServiceLayer → CoolShop.ServiceLayer
-OT.PresentationLayer → CoolShop.PresentationLayer
+OptimalyChat.sln → CoolShop.sln
+OptimalyChat.DataLayer → CoolShop.DataLayer  
+OptimalyChat.ServiceLayer → CoolShop.ServiceLayer
+OptimalyChat.PresentationLayer → CoolShop.PresentationLayer
 Database: coolshop_db, User: coolshop_user
 Docker containers: coolshop-postgres, coolshop-pgadmin
 ```
@@ -254,7 +254,7 @@ If something goes wrong, you can restore from the automatic backup:
 rm -rf current-directory
 
 # Restore from backup
-cp -r ../OptimalyTemplate_backup_YYYYMMDD_HHMMSS ./YourAppName
+cp -r ../OptimalyChat_backup_YYYYMMDD_HHMMSS ./YourAppName
 
 # Try rename again with fixes
 ```

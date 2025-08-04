@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <ProjectPrefix>OT</ProjectPrefix>
-    <AppName>OptimalyTemplate</AppName>
+    <ProjectPrefix>OC</ProjectPrefix>
+    <AppName>OptimalyChat</AppName>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -11,7 +11,7 @@
     <NoWarn>$(NoWarn);1591</NoWarn>
     
     <!-- Docker Configuration -->
-    <DockerPostgresPort>5434</DockerPostgresPort>
+    <DockerPostgresPort>5437</DockerPostgresPort>
     <DockerPgAdminPort>5051</DockerPgAdminPort>
     <DockerDbName>$(AppName)_db</DockerDbName>
     <DockerDbUser>$(AppName)_user</DockerDbUser>
