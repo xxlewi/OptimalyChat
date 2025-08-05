@@ -115,7 +115,7 @@
                             <div class="message user">
                                 <div class="message-content">
                                     <div class="message-bubble">
-                                        @message.Content
+                                        <span class="message-text">@message.Content</span>
                                     </div>
                                     <div class="message-info">
                                         <span class="message-time">@message.CreatedAt.ToString("HH:mm")</span>
@@ -135,7 +135,7 @@
                             <div class="message assistant">
                                 <div class="message-content">
                                     <div class="message-bubble">
-                                        @message.Content
+                                        <span class="message-text">@Html.Raw(message.Content)</span>
                                     </div>
                                     <div class="message-info">
                                         <span class="message-model">@(string.IsNullOrEmpty(message.Model) ? "AI Assistant" : message.Model)</span>

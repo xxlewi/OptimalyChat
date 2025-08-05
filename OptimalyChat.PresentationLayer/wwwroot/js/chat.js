@@ -224,7 +224,12 @@
         messageBubble.className = 'message-bubble';
         const contentSpan = document.createElement('span');
         contentSpan.className = 'message-text';
-        contentSpan.textContent = content;
+        // Use innerHTML for AI messages to support formatting
+        if (role === 'assistant' && content) {
+            contentSpan.innerHTML = parseMarkdown(content);
+        } else {
+            contentSpan.textContent = content;
+        }
         messageBubble.appendChild(contentSpan);
 
         const messageInfo = document.createElement('div');
@@ -252,13 +257,46 @@
         scrollToBottom();
     }
 
+    // Parse markdown-like formatting
+    function parseMarkdown(text) {
+        // Convert markdown to HTML for better formatting
+        return text
+            // Bold
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            // Italic
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            // Code blocks
+            .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+            // Inline code
+            .replace(/`([^`]+)`/g, '<code>$1</code>')
+            // Links
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
+            // Bullet points
+            .replace(/^\* (.+)$/gm, '<li>$1</li>')
+            .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
+            // Headers
+            .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+            .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+            .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+            // Line breaks
+            .replace(/\n\n/g, '</p><p>')
+            .replace(/\n/g, '<br>')
+            // Wrap in paragraphs
+            .replace(/^(?!<[hpul])(.+)$/gm, '<p>$1</p>')
+            // Clean up
+            .replace(/<p><\/p>/g, '')
+            .replace(/<p><ul>/g, '<ul>')
+            .replace(/<\/ul><\/p>/g, '</ul>');
+    }
+
     // Update message content
     function updateMessageContent(messageId, content) {
         const messageElement = document.getElementById(messageId);
         if (messageElement) {
             const contentSpan = messageElement.querySelector('.message-text');
             if (contentSpan) {
-                contentSpan.textContent = content;
+                // Parse markdown and set as HTML
+                contentSpan.innerHTML = parseMarkdown(content);
             }
         }
     }

@@ -104,6 +104,8 @@
     position: relative;
     word-wrap: break-word;
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    white-space: pre-wrap;
+    line-height: 1.6;
 }
 
 .message.user .message-bubble {
@@ -116,6 +118,103 @@
     background: white;
     color: #333;
     border-bottom-left-radius: 4px;
+}
+
+/* Markdown-like formatting in messages */
+.message-bubble ul,
+.message-bubble ol {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.message-bubble ul li,
+.message-bubble ol li {
+    margin: 4px 0;
+}
+
+.message-bubble strong {
+    font-weight: 600;
+}
+
+.message-bubble em {
+    font-style: italic;
+}
+
+.message-bubble p {
+    margin: 8px 0;
+}
+
+.message-bubble p:first-child {
+    margin-top: 0;
+}
+
+.message-bubble p:last-child {
+    margin-bottom: 0;
+}
+
+.message-bubble code {
+    background: rgba(0,0,0,0.05);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+}
+
+.message.user .message-bubble code {
+    background: rgba(255,255,255,0.2);
+}
+
+.message-bubble pre {
+    background: rgba(0,0,0,0.05);
+    padding: 8px 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 8px 0;
+}
+
+.message.user .message-bubble pre {
+    background: rgba(255,255,255,0.15);
+}
+
+.message-bubble blockquote {
+    border-left: 3px solid #667eea;
+    padding-left: 12px;
+    margin: 8px 0;
+    color: #666;
+}
+
+.message.user .message-bubble blockquote {
+    border-left-color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.9);
+}
+
+.message-bubble a {
+    color: #667eea;
+    text-decoration: underline;
+}
+
+.message.user .message-bubble a {
+    color: #ffffff;
+}
+
+.message-bubble h1,
+.message-bubble h2,
+.message-bubble h3,
+.message-bubble h4,
+.message-bubble h5,
+.message-bubble h6 {
+    margin: 12px 0 8px 0;
+    font-weight: 600;
+}
+
+.message-bubble hr {
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.message.user .message-bubble hr {
+    border-top-color: rgba(255,255,255,0.3);
 }
 
 /* Message Info */
