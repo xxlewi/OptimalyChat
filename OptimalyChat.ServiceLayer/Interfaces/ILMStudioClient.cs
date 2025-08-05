@@ -24,6 +24,11 @@ public interface ILMStudioClient
     /// Test connection to LM Studio
     /// </summary>
     Task<bool> TestConnectionAsync(CancellationToken cancellationToken = default);
+    
+    /// <summary>
+    /// Get loaded models from LM Studio
+    /// </summary>
+    Task<IEnumerable<LMStudioLoadedModel>> GetLoadedModelsAsync(CancellationToken cancellationToken = default);
 }
 
 /// <summary>
@@ -122,4 +127,19 @@ public class ChatChunkDelta
 {
     public string? Role { get; set; }
     public string? Content { get; set; }
+}
+
+/// <summary>
+/// LM Studio loaded model information
+/// </summary>
+public class LMStudioLoadedModel
+{
+    public string Id { get; set; } = string.Empty;
+    public string Object { get; set; } = "model";
+    public string OwnedBy { get; set; } = "organization_owner";
+    public List<object> Permission { get; set; } = new();
+    public int Created { get; set; }
+    public string State { get; set; } = "not-loaded";
+    public double? EstimatedVram { get; set; }
+    public double? EstimatedVramGB { get; set; }
 }

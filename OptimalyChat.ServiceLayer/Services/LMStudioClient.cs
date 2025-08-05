@@ -161,9 +161,48 @@ public class LMStudioClient : ILMStudioClient
             return false;
         }
     }
+
+    /// <summary>
+    /// Get loaded models from LM Studio
+    /// </summary>
+    public async Task<IEnumerable<LMStudioLoadedModel>> GetLoadedModelsAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            // Use the LM Studio specific API endpoint
+            var baseUrl = _configuration["LMStudio:BaseUrl"] ?? "http://localhost:1234";
+            if (baseUrl.EndsWith("/v1") || baseUrl.EndsWith("/v1/"))
+            {
+                baseUrl = baseUrl.Replace("/v1/", "").Replace("/v1", "");
+            }
+            
+            var loadedModelsUrl = $"{baseUrl}/api/v0/models";
+            _logger.LogInformation("Getting loaded models from LM Studio at: {Url}", loadedModelsUrl);
+            
+            using var request = new HttpRequestMessage(HttpMethod.Get, loadedModelsUrl);
+            var response = await _httpClient.SendAsync(request, cancellationToken);
+            response.EnsureSuccessStatusCode();
+            
+            var content = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogInformation("LM Studio loaded models response: {Content}", content);
+            
+            var result = JsonSerializer.Deserialize<LoadedModelsResponse>(content, _jsonOptions);
+            return result?.Data ?? new List<LMStudioLoadedModel>();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error getting loaded models from LM Studio");
+            return Array.Empty<LMStudioLoadedModel>();
+        }
+    }
     
     private class ModelsResponse
     {
         public List<LMStudioModel> Data { get; set; } = new();
+    }
+    
+    private class LoadedModelsResponse
+    {
+        public List<LMStudioLoadedModel> Data { get; set; } = new();
     }
 }

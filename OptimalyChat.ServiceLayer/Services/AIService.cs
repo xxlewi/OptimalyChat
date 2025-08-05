@@ -256,9 +256,12 @@ public class AIService : IAIService
         var modelRepo = _unitOfWork.GetRepository<AIModel, int>();
         var dbModels = await modelRepo.Query.ToListAsync(cancellationToken);
         
-        // Get currently loaded models from LM Studio
-        var lmModels = await _lmStudioClient.GetModelsAsync(cancellationToken);
-        var loadedModelIds = lmModels.Select(m => m.Id).ToHashSet();
+        // Get currently loaded models from LM Studio using the v0 API
+        var loadedModels = await _lmStudioClient.GetLoadedModelsAsync(cancellationToken);
+        var loadedModelIds = loadedModels
+            .Where(m => m.State == "loaded")
+            .Select(m => m.Id)
+            .ToHashSet();
         
         // Map to DTOs and mark which ones are loaded
         var modelDtos = _mapper.Map<List<AIModelDto>>(dbModels);
@@ -451,7 +454,7 @@ public class AIService : IAIService
         if (model.IsDefault)
             throw new BusinessException("Cannot delete the default model", "DEFAULT_MODEL_DELETION");
             
-        await modelRepo.DeleteAsync(model, cancellationToken);
+        modelRepo.Delete(model);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
         _logger.LogInformation("Deleted model {ModelId}", modelId);
     }

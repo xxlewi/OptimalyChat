@@ -39,6 +39,7 @@ public class SettingsController : Controller
     /// Display AI settings page
     /// </summary>
     [HttpGet]
+    [Produces("text/html")]
     public async Task<IActionResult> Index()
     {
         try
@@ -58,7 +59,7 @@ public class SettingsController : Controller
                 }
             };
             
-            return View(viewModel);
+            return View("Index", viewModel);
         }
         catch (Exception ex)
         {
