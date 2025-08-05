@@ -329,16 +329,43 @@ public class AIService : IAIService
             Content = "You are OptimalyChat, a helpful AI assistant. Provide clear, concise, and accurate responses."
         });
         
-        // Add context messages
-        foreach (var msg in context)
+        // Add context messages, ensuring proper role alternation
+        var contextList = context.Where(m => m.Content != null).ToList();
+        
+        // If we have context, ensure it starts with user message
+        if (contextList.Any())
         {
-            if (msg.Content != null)
+            // Find the first user message index
+            var firstUserIndex = contextList.FindIndex(m => m.Role == "user");
+            if (firstUserIndex > 0)
             {
+                // Skip messages before the first user message
+                contextList = contextList.Skip(firstUserIndex).ToList();
+            }
+            
+            // Add messages ensuring alternation
+            string lastRole = null;
+            foreach (var msg in contextList)
+            {
+                // Skip duplicate roles to maintain alternation
+                if (lastRole == msg.Role)
+                {
+                    _logger.LogWarning("Skipping message with duplicate role: {Role}", msg.Role);
+                    continue;
+                }
+                
                 messages.Add(new ChatMessage
                 {
                     Role = msg.Role,
                     Content = msg.Content
                 });
+                lastRole = msg.Role;
+            }
+            
+            // If last message was from user, we need to remove it since we're adding current message
+            if (lastRole == "user" && messages.Count > 1)
+            {
+                messages.RemoveAt(messages.Count - 1);
             }
         }
         
