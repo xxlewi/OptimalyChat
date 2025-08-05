@@ -123,6 +123,7 @@ public class ChatHub : Hub
         int projectId, 
         int conversationId, 
         string message,
+        int? modelId = null,
         [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
         _logger.LogInformation("SendMessage called - ProjectId: {ProjectId}, ConversationId: {ConversationId}, Message: {Message}", 
@@ -156,7 +157,7 @@ public class ChatHub : Hub
         try
         {
             // Stream the response
-            await foreach (var chunk in _aiService.StreamResponseAsync(projectId, conversationId, message, cancellationToken))
+            await foreach (var chunk in _aiService.StreamResponseAsync(projectId, conversationId, message, modelId, cancellationToken))
             {
                 _logger.LogDebug("Streaming chunk: {Chunk}", chunk);
                 yield return chunk;

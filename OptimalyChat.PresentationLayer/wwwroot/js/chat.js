@@ -155,12 +155,16 @@
         addMessageToUI('assistant', '', new Date(), aiMessageId);
 
         try {
+            // Get selected model
+            const modelSelector = document.getElementById('modelSelector');
+            const selectedModelId = modelSelector ? parseInt(modelSelector.value) : null;
+            
             // Use SignalR streaming
             let fullResponse = '';
             
-            console.log('Starting stream with:', { currentProjectId, currentConversationId, message });
+            console.log('Starting stream with:', { currentProjectId, currentConversationId, message, selectedModelId });
             
-            connection.stream('SendMessage', currentProjectId, currentConversationId, message)
+            connection.stream('SendMessage', currentProjectId, currentConversationId, message, selectedModelId)
                 .subscribe({
                     next: (chunk) => {
                         console.log('Received chunk:', chunk);

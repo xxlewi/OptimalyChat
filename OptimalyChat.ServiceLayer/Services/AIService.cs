@@ -127,6 +127,22 @@ public class AIService : IAIService
         string message, 
         [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
+        await foreach (var chunk in StreamResponseAsync(projectId, conversationId, message, null, cancellationToken))
+        {
+            yield return chunk;
+        }
+    }
+    
+    /// <summary>
+    /// Stream AI response for a message with specific model
+    /// </summary>
+    public async IAsyncEnumerable<string> StreamResponseAsync(
+        int projectId, 
+        int conversationId, 
+        string message,
+        int? modelId,
+        [EnumeratorCancellation] CancellationToken cancellationToken = default)
+    {
         _logger.LogInformation("StreamResponseAsync called - ProjectId: {ProjectId}, ConversationId: {ConversationId}, Message: {Message}", 
             projectId, conversationId, message);
             
@@ -160,8 +176,22 @@ public class AIService : IAIService
         // Build prompt with context
         var messages = BuildMessagesWithContext(context, message);
         
-        // Get AI model
-        var model = await GetDefaultModelAsync(cancellationToken);
+        // Get AI model - use specified model or default
+        AIModel model;
+        if (modelId.HasValue)
+        {
+            var modelRepo = _unitOfWork.GetRepository<AIModel, int>();
+            model = await modelRepo.GetByIdAsync(modelId.Value, cancellationToken);
+            if (model == null || !model.IsActive)
+            {
+                _logger.LogWarning("Specified model {ModelId} not found or inactive, falling back to default", modelId);
+                model = await GetDefaultModelAsync(cancellationToken);
+            }
+        }
+        else
+        {
+            model = await GetDefaultModelAsync(cancellationToken);
+        }
         _logger.LogInformation("Using AI model: {Model}", model.ModelId);
         
         // Call LM Studio with streaming

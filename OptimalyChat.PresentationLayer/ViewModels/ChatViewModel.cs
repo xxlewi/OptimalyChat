@@ -14,4 +14,6 @@ public class ChatViewModel : BaseViewModel
     public List<MessageDto> Messages { get; set; } = new();
     public bool IsConnected { get; set; }
     public string? ConnectionError { get; set; }
+    public List<AIModelDto> AvailableModels { get; set; } = new();
+    public int? SelectedModelId { get; set; }
 }

@@ -18,6 +18,11 @@ public interface IAIService
     IAsyncEnumerable<string> StreamResponseAsync(int projectId, int conversationId, string message, CancellationToken cancellationToken = default);
     
     /// <summary>
+    /// Stream AI response for a message with specific model
+    /// </summary>
+    IAsyncEnumerable<string> StreamResponseAsync(int projectId, int conversationId, string message, int? modelId, CancellationToken cancellationToken = default);
+    
+    /// <summary>
     /// Get relevant context from project history
     /// </summary>
     Task<IEnumerable<MessageDto>> GetRelevantContextAsync(int projectId, string query, int topK = 5, CancellationToken cancellationToken = default);

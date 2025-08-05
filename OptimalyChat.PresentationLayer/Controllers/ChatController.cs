@@ -35,6 +35,7 @@ public class ChatController : Controller
     /// Main chat interface
     /// </summary>
     [HttpGet]
+    [Produces("text/html")]
     public async Task<IActionResult> Index(int? projectId = null, int? conversationId = null)
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -92,6 +93,18 @@ public class ChatController : Controller
             if (!viewModel.IsConnected)
             {
                 viewModel.ConnectionError = "Unable to connect to LM Studio. Please ensure it's running on http://localhost:1234";
+            }
+            else
+            {
+                // Get available AI models
+                var models = await _aiService.GetAvailableModelsAsync();
+                viewModel.AvailableModels = models
+                    .Where(m => m.IsActive && m.IsLoadedInLMStudio)
+                    .ToList();
+                
+                // Set selected model to default
+                viewModel.SelectedModelId = viewModel.AvailableModels
+                    .FirstOrDefault(m => m.IsDefault)?.Id;
             }
         }
         catch (Exception ex)
