@@ -31,4 +31,24 @@ public interface IAIService
     /// Get available AI models
     /// </summary>
     Task<IEnumerable<AIModelDto>> GetAvailableModelsAsync(CancellationToken cancellationToken = default);
+    
+    /// <summary>
+    /// Set default AI model
+    /// </summary>
+    Task SetDefaultModelAsync(int modelId, CancellationToken cancellationToken = default);
+    
+    /// <summary>
+    /// Toggle model active status
+    /// </summary>
+    Task ToggleModelStatusAsync(int modelId, CancellationToken cancellationToken = default);
+    
+    /// <summary>
+    /// Delete AI model
+    /// </summary>
+    Task DeleteModelAsync(int modelId, CancellationToken cancellationToken = default);
+    
+    /// <summary>
+    /// Sync models from LM Studio
+    /// </summary>
+    Task SyncModelsFromLMStudioAsync(CancellationToken cancellationToken = default);
 }

@@ -105,8 +105,12 @@ public class SettingsController : Controller
     {
         try
         {
+            // Force sync models from LM Studio
+            await _aiService.SyncModelsFromLMStudioAsync();
+            
             var models = await _aiService.GetAvailableModelsAsync();
-            TempData["Success"] = $"Successfully synced {models.Count()} models from LM Studio!";
+            var loadedCount = models.Count(m => m.IsLoadedInLMStudio);
+            TempData["Success"] = $"Found {loadedCount} models loaded in LM Studio!";
             return RedirectToAction(nameof(Index));
         }
         catch (Exception ex)
@@ -125,7 +129,7 @@ public class SettingsController : Controller
     {
         try
         {
-            // This would need to be implemented in the service layer
+            await _aiService.SetDefaultModelAsync(id);
             TempData["Success"] = "Default model updated successfully!";
             return RedirectToAction(nameof(Index));
         }
@@ -145,7 +149,7 @@ public class SettingsController : Controller
     {
         try
         {
-            // This would need to be implemented in the service layer
+            await _aiService.ToggleModelStatusAsync(id);
             TempData["Success"] = "Model status updated successfully!";
             return RedirectToAction(nameof(Index));
         }
@@ -165,7 +169,7 @@ public class SettingsController : Controller
     {
         try
         {
-            // This would need to be implemented in the service layer
+            await _aiService.DeleteModelAsync(id);
             TempData["Success"] = "Model deleted successfully!";
             return RedirectToAction(nameof(Index));
         }

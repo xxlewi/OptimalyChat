@@ -254,41 +254,20 @@ public class AIService : IAIService
     {
         // Get models from database
         var modelRepo = _unitOfWork.GetRepository<AIModel, int>();
-        var dbModels = await modelRepo.Query
-            .Where(m => m.IsActive)
-            .ToListAsync(cancellationToken);
+        var dbModels = await modelRepo.Query.ToListAsync(cancellationToken);
         
-        // Get models from LM Studio
+        // Get currently loaded models from LM Studio
         var lmModels = await _lmStudioClient.GetModelsAsync(cancellationToken);
+        var loadedModelIds = lmModels.Select(m => m.Id).ToHashSet();
         
-        // Sync with database
-        foreach (var lmModel in lmModels)
+        // Map to DTOs and mark which ones are loaded
+        var modelDtos = _mapper.Map<List<AIModelDto>>(dbModels);
+        foreach (var dto in modelDtos)
         {
-            if (!dbModels.Any(m => m.ModelId == lmModel.Id))
-            {
-                var newModel = new AIModel
-                {
-                    Name = lmModel.Id,
-                    ModelId = lmModel.Id,
-                    Provider = "LMStudio",
-                    Endpoint = _configuration["LMStudio:BaseUrl"] ?? "http://localhost:1234/v1",
-                    MaxTokens = 4096,
-                    Temperature = 0.7,
-                    IsActive = true
-                };
-                
-                await modelRepo.AddAsync(newModel, cancellationToken);
-            }
+            dto.IsLoadedInLMStudio = loadedModelIds.Contains(dto.ModelId);
         }
         
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
-        
-        // Return all active models
-        var allModels = await modelRepo.Query
-            .Where(m => m.IsActive)
-            .ToListAsync(cancellationToken);
-        
-        return _mapper.Map<IEnumerable<AIModelDto>>(allModels);
+        return modelDtos;
     }
 
     private async Task<IEnumerable<Message>> GetConversationContextAsync(int conversationId, CancellationToken cancellationToken)
@@ -365,7 +344,7 @@ public class AIService : IAIService
         return model;
     }
     
-    private async Task SyncModelsFromLMStudioAsync(CancellationToken cancellationToken)
+    public async Task SyncModelsFromLMStudioAsync(CancellationToken cancellationToken = default)
     {
         try
         {
@@ -409,5 +388,71 @@ public class AIService : IAIService
     {
         // Simple estimation: ~4 characters per token
         return (int)Math.Ceiling(text.Length / 4.0);
+    }
+    
+    /// <summary>
+    /// Set default AI model
+    /// </summary>
+    public async Task SetDefaultModelAsync(int modelId, CancellationToken cancellationToken = default)
+    {
+        var modelRepo = _unitOfWork.GetRepository<AIModel, int>();
+        
+        // First, unset all models as default
+        var allModels = await modelRepo.Query.ToListAsync(cancellationToken);
+        foreach (var model in allModels)
+        {
+            model.IsDefault = false;
+        }
+        
+        // Set the selected model as default
+        var selectedModel = await modelRepo.GetByIdAsync(modelId, cancellationToken);
+        if (selectedModel == null)
+            throw new NotFoundException($"AI Model with ID {modelId} not found");
+            
+        selectedModel.IsDefault = true;
+        
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+        _logger.LogInformation("Set model {ModelId} as default", modelId);
+    }
+    
+    /// <summary>
+    /// Toggle model active status
+    /// </summary>
+    public async Task ToggleModelStatusAsync(int modelId, CancellationToken cancellationToken = default)
+    {
+        var modelRepo = _unitOfWork.GetRepository<AIModel, int>();
+        var model = await modelRepo.GetByIdAsync(modelId, cancellationToken);
+        
+        if (model == null)
+            throw new NotFoundException($"AI Model with ID {modelId} not found");
+            
+        // Don't allow deactivating the default model
+        if (model.IsDefault && model.IsActive)
+            throw new BusinessException("Cannot deactivate the default model", "DEFAULT_MODEL_DEACTIVATION");
+            
+        model.IsActive = !model.IsActive;
+        
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+        _logger.LogInformation("Toggled model {ModelId} status to {Status}", modelId, model.IsActive);
+    }
+    
+    /// <summary>
+    /// Delete AI model
+    /// </summary>
+    public async Task DeleteModelAsync(int modelId, CancellationToken cancellationToken = default)
+    {
+        var modelRepo = _unitOfWork.GetRepository<AIModel, int>();
+        var model = await modelRepo.GetByIdAsync(modelId, cancellationToken);
+        
+        if (model == null)
+            throw new NotFoundException($"AI Model with ID {modelId} not found");
+            
+        // Don't allow deleting the default model
+        if (model.IsDefault)
+            throw new BusinessException("Cannot delete the default model", "DEFAULT_MODEL_DELETION");
+            
+        await modelRepo.DeleteAsync(model, cancellationToken);
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+        _logger.LogInformation("Deleted model {ModelId}", modelId);
     }
 }

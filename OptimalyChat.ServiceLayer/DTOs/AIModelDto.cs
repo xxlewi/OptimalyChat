@@ -18,4 +18,9 @@ public class AIModelDto : BaseDto
     public bool IsLocalModel { get; set; }
     public bool RequiresApiKey { get; set; }
     public string DisplayName { get; set; } = string.Empty;
+    
+    /// <summary>
+    /// Whether this model is currently loaded in LM Studio
+    /// </summary>
+    public bool IsLoadedInLMStudio { get; set; }
 }

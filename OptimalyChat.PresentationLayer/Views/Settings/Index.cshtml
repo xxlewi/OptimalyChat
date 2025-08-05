@@ -100,6 +100,7 @@
                             <th>Max Tokens</th>
                             <th>Temperature</th>
                             <th>Status</th>
+                            <th>Loaded</th>
                             <th>Default</th>
                             <th>Actions</th>
                         </tr>
@@ -118,6 +119,12 @@
                                     <td>
                                         <span class="badge @(aiModel.IsActive ? "badge-success" : "badge-secondary")">
                                             @(aiModel.IsActive ? "Active" : "Inactive")
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="badge @(aiModel.IsLoadedInLMStudio ? "badge-info" : "badge-secondary")">
+                                            <i class="fas @(aiModel.IsLoadedInLMStudio ? "fa-check" : "fa-times")"></i>
+                                            @(aiModel.IsLoadedInLMStudio ? "Loaded" : "Not Loaded")
                                         </span>
                                     </td>
                                     <td>
@@ -156,7 +163,7 @@
                         else
                         {
                             <tr>
-                                <td colspan="8" class="text-center text-muted">
+                                <td colspan="9" class="text-center text-muted">
                                     No models found. Click "Sync from LM Studio" to import available models.
                                 </td>
                             </tr>
