@@ -150,7 +150,7 @@
                                 <!-- AI Message -->
                                 <div class="direct-chat-msg">
                                     <div class="direct-chat-infos clearfix">
-                                        <span class="direct-chat-name float-left">AI Assistant</span>
+                                        <span class="direct-chat-name float-left">@(string.IsNullOrEmpty(message.Model) ? "AI Assistant" : message.Model)</span>
                                         <span class="direct-chat-timestamp float-right">@message.CreatedAt.ToString("HH:mm")</span>
                                     </div>
                                     <img class="direct-chat-img" src="https://ui-avatars.com/api/?name=AI&background=17a2b8&color=fff" alt="AI">

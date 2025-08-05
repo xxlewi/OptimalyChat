@@ -1,0 +1,1092 @@
+Použití nastavení spuštění z OptimalyChat.PresentationLayer/Properties/launchSettings.json...
+Sestavování...
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.DataLayer/Entities/AIModel.cs(61,17): warning CS0108: AIModel.IsActive skryje zděděný člen BaseEntity.IsActive. Pokud je skrytí úmyslné, použijte klíčové slovo new. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.DataLayer/OptimalyChat.DataLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.DataLayer/Configurations/AIModelConfiguration.cs(68,9): warning CS0618: RelationalEntityTypeBuilderExtensions.HasCheckConstraint<TEntity>(EntityTypeBuilder<TEntity>, string, string?) je zastaralá: Configure this using ToTable(t => t.HasCheckConstraint()) instead.. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.DataLayer/OptimalyChat.DataLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.DataLayer/Configurations/AIModelConfiguration.cs(71,9): warning CS0618: RelationalEntityTypeBuilderExtensions.HasCheckConstraint<TEntity>(EntityTypeBuilder<TEntity>, string, string?) je zastaralá: Configure this using ToTable(t => t.HasCheckConstraint()) instead.. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.DataLayer/OptimalyChat.DataLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/Services/BaseService.cs(72,67): warning CS8604: V parametru key v NotFoundException.NotFoundException(string entityName, object key) může být argument s odkazem null. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/OptimalyChat.ServiceLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/Services/SearchService.cs(47,29): warning CS8602: Přístup přes ukazatel k možnému odkazu s hodnotou null [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/OptimalyChat.ServiceLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/Services/SearchService.cs(107,25): warning CS8602: Přístup přes ukazatel k možnému odkazu s hodnotou null [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/OptimalyChat.ServiceLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/Services/SearchService.cs(113,30): warning CS8620: Argument typu List<string?> nejde použít pro parametr collection typu IEnumerable<string> v void List<string>.AddRange(IEnumerable<string> collection) z důvodu rozdílů v možnostech použití hodnoty null u odkazových typů. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/OptimalyChat.ServiceLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/Services/AIService.cs(184,21): warning CS8600: Literál s hodnotou null nebo s možnou hodnotou null se převádí na typ, který nemůže mít hodnotu null. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/OptimalyChat.ServiceLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/Services/SearchService.cs(123,25): warning CS8602: Přístup přes ukazatel k možnému odkazu s hodnotou null [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/OptimalyChat.ServiceLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/ViewModels/ExportViewModel.cs(29,20): warning CS0108: ExportViewModel.ErrorMessage skryje zděděný člen BaseViewModel.ErrorMessage. Pokud je skrytí úmyslné, použijte klíčové slovo new. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/OptimalyChat.PresentationLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/ViewModels/ExportViewModel.cs(34,20): warning CS0108: ExportViewModel.SuccessMessage skryje zděděný člen BaseViewModel.SuccessMessage. Pokud je skrytí úmyslné, použijte klíčové slovo new. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/OptimalyChat.PresentationLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/ViewModels/GlobalSearchViewModel.cs(28,20): warning CS0108: GlobalSearchViewModel.ErrorMessage skryje zděděný člen BaseViewModel.ErrorMessage. Pokud je skrytí úmyslné, použijte klíčové slovo new. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/OptimalyChat.PresentationLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/ViewModels/SettingsViewModel.cs(52,16): warning CS0108: AIModelEditViewModel.Id skryje zděděný člen BaseViewModel.Id. Pokud je skrytí úmyslné, použijte klíčové slovo new. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/OptimalyChat.PresentationLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/Controllers/DevAuthController.cs(63,40): warning CS8604: V parametru value v Claim.Claim(string type, string value) může být argument s odkazem null. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/OptimalyChat.PresentationLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/Controllers/DevAuthController.cs(64,41): warning CS8604: V parametru value v Claim.Claim(string type, string value) může být argument s odkazem null. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/OptimalyChat.PresentationLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/Controllers/DevAuthController.cs(70,67): warning CS8604: V parametru s v byte[] Encoding.GetBytes(string s) může být argument s odkazem null. [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/OptimalyChat.PresentationLayer.csproj]
+/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/Controllers/DevAuthController.cs(96,55): warning CS8602: Přístup přes ukazatel k možnému odkazu s hodnotou null [/Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.PresentationLayer/OptimalyChat.PresentationLayer.csproj]
+[10:36:49 INF] Spouštění aplikace OptimalyChat {"MachineName": "jiri-macbookpro", "ThreadId": 1, "EnvironmentName": "Development"}
+[10:36:49 INF] Database is up to date, no migrations needed {"SourceContext": "OptimalyChat.PresentationLayer", "MachineName": "jiri-macbookpro", "ThreadId": 1, "EnvironmentName": "Development"}
+[10:36:49 INF] Aplikace úspěšně spuštěna {"MachineName": "jiri-macbookpro", "ThreadId": 1, "EnvironmentName": "Development"}
+[10:36:56 WRN] Failed to determine the https port for redirect. {"EventId": {"Id": 3, "Name": "FailedToDeterminePort"}, "SourceContext": "Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware", "RequestId": "0HNEJVCU6O3NT:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:36:56 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NT:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:36:56 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NT:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:36:56 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NT:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:36:56 INF] HTTP GET /Chat responded 200 in 398.4316 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NT:00000001", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:36:56 INF] HTTP GET /js/chat.js responded 200 in 7.4906 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NU:00000001", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:36:56 INF] HTTP GET /js/signalr/dist/browser/signalr.min.js responded 200 in 7.5909 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NT:00000002", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:36:56 INF] HTTP POST /chathub/negotiate responded 200 in 9.3834 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NT:00000003", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:36:56 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:36:56 INF] Client -D_uSjbCorxURqq-JpU_8w connected, User: jiri.maly@optimaly.net, UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, UserId from Claim: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:36:56 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:36:56 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:01 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:01 INF] SendMessage called - ProjectId: 2, ConversationId: 3, Message: kuku? {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:01 INF] UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, User: jiri.maly@optimaly.net {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:01 INF] Project lookup - Project: 2, UserId: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:01 INF] Starting AI streaming response {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:01 INF] StreamResponseAsync called - ProjectId: 2, ConversationId: 3, Message: kuku? {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:01 INF] Using AI model: google/gemma-3-27b {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:01 INF] Sending request to LM Studio - Model: google/gemma-3-27b, Messages count: 12 {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:01 WRN] Failed to parse streaming chunk: "Error rendering prompt with jinja template: \"Error: Conversation roles must alternate user/assistant/user/assistant/...\n    at /Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:286933\n    at _0x48bffc.value (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:285122)\n    at _0x28b276.evaluateCallExpression (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:274174)\n    at _0x28b276.evaluate (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:283994)\n    at _0x28b276.evaluateBlock (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:273381)\n    at _0x28b276.evaluateIf (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:277865)\n    at _0x28b276.evaluate (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:282752)\n    at _0x28b276.evaluateBlock (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:273381)\n    at _0x28b276.evaluateFor (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:280982)\n    at _0x28b276.evaluate (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:282825)\". This is usually an issue with the model's prompt template. If you are using a popular model, you can try to search the model under lmstudio-community, which will have fixed prompt templates. If you cannot find one, you are welcome to post this issue to our discord or issue tracker on GitHub. Alternatively, if you know how to write jinja templates, you can override the prompt template in My Models > model settings > Prompt Template." {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+System.Text.Json.JsonException: The JSON value could not be converted to OptimalyChat.ServiceLayer.Interfaces.ChatCompletionChunk. Path: $ | LineNumber: 0 | BytePositionInLine: 1736.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at OptimalyChat.ServiceLayer.Services.LMStudioClient.StreamChatCompletionAsync(ChatCompletionRequest request, CancellationToken cancellationToken)+MoveNext() in /Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/Services/LMStudioClient.cs:line 134
+[10:37:01 INF] AI streaming response completed {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:37:01 INF] HTTP POST /chathub/negotiate responded 200 in 0.5645 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NT:00000004", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:37:01 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "EhwzEhSf0TvpUv0Gn9v5kA", "RequestId": "0HNEJVCU6O3O0:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O0", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:01 INF] Client EhwzEhSf0TvpUv0Gn9v5kA connected, User: jiri.maly@optimaly.net, UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, UserId from Claim: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "EhwzEhSf0TvpUv0Gn9v5kA", "RequestId": "0HNEJVCU6O3O0:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:01 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "EhwzEhSf0TvpUv0Gn9v5kA", "RequestId": "0HNEJVCU6O3O0:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O0", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:01 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "EhwzEhSf0TvpUv0Gn9v5kA", "RequestId": "0HNEJVCU6O3O0:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O0", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:01 INF] HTTP GET / responded 302 in 1.4319 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NT:00000005", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:01 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NT:00000006", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:01 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NT:00000006", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:01 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NT:00000006", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:01 INF] HTTP GET /Chat responded 200 in 17.5688 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NT:00000006", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:01 INF] HTTP GET /js/chat.js responded 200 in 1.5248 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NT:00000007", "ConnectionId": "0HNEJVCU6O3NT", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:37:01 INF] HTTP GET /js/signalr/dist/browser/signalr.min.js responded 200 in 2.2450 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NU:00000002", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:02 INF] HTTP POST /chathub/negotiate responded 200 in 0.4012 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NU:00000003", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:37:02 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:02 INF] Client -aHrnajP6CT4bz74f0ahpQ connected, User: jiri.maly@optimaly.net, UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, UserId from Claim: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:02 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:02 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:08 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:08 INF] SendMessage called - ProjectId: 2, ConversationId: 3, Message: buku {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:08 INF] UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, User: jiri.maly@optimaly.net {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:08 INF] Project lookup - Project: 2, UserId: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:08 INF] Starting AI streaming response {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:08 INF] StreamResponseAsync called - ProjectId: 2, ConversationId: 3, Message: buku {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 14, "EnvironmentName": "Development"}
+[10:37:08 INF] Using AI model: qwen/qwen2.5-coder-14b {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:37:08 INF] Sending request to LM Studio - Model: qwen/qwen2.5-coder-14b, Messages count: 12 {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 8, "EnvironmentName": "Development"}
+[10:37:09 INF] AI streaming response completed {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 12, "EnvironmentName": "Development"}
+[10:37:16 INF] HTTP POST /chathub/negotiate responded 200 in 1.8268 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NU:00000004", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 20, "EnvironmentName": "Development"}
+[10:37:16 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "lCpS97uFwANY0Bujt2V1sA", "RequestId": "0HNEJVCU6O3O2:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O2", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:16 INF] Client lCpS97uFwANY0Bujt2V1sA connected, User: jiri.maly@optimaly.net, UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, UserId from Claim: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "lCpS97uFwANY0Bujt2V1sA", "RequestId": "0HNEJVCU6O3O2:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:16 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "lCpS97uFwANY0Bujt2V1sA", "RequestId": "0HNEJVCU6O3O2:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O2", "MachineName": "jiri-macbookpro", "ThreadId": 6, "EnvironmentName": "Development"}
+[10:37:16 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "lCpS97uFwANY0Bujt2V1sA", "RequestId": "0HNEJVCU6O3O2:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O2", "MachineName": "jiri-macbookpro", "ThreadId": 20, "EnvironmentName": "Development"}
+[10:37:23 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:37:23 INF] SendMessage called - ProjectId: 2, ConversationId: 3, Message: jak se máš? {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:37:23 INF] UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, User: jiri.maly@optimaly.net {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:37:23 INF] Project lookup - Project: 2, UserId: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:37:23 INF] Starting AI streaming response {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:37:23 INF] StreamResponseAsync called - ProjectId: 2, ConversationId: 3, Message: jak se máš? {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:37:23 INF] Using AI model: google/gemma-3-12b {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:37:23 INF] Sending request to LM Studio - Model: google/gemma-3-12b, Messages count: 12 {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:37:23 WRN] Failed to parse streaming chunk: "Error rendering prompt with jinja template: \"Error: Conversation roles must alternate user/assistant/user/assistant/...\n    at /Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:286933\n    at _0x48bffc.value (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:285122)\n    at _0x28b276.evaluateCallExpression (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:274174)\n    at _0x28b276.evaluate (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:283994)\n    at _0x28b276.evaluateBlock (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:273381)\n    at _0x28b276.evaluateIf (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:277865)\n    at _0x28b276.evaluate (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:282752)\n    at _0x28b276.evaluateBlock (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:273381)\n    at _0x28b276.evaluateFor (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:280982)\n    at _0x28b276.evaluate (/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/llmworker.js:117:282825)\". This is usually an issue with the model's prompt template. If you are using a popular model, you can try to search the model under lmstudio-community, which will have fixed prompt templates. If you cannot find one, you are welcome to post this issue to our discord or issue tracker on GitHub. Alternatively, if you know how to write jinja templates, you can override the prompt template in My Models > model settings > Prompt Template." {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+System.Text.Json.JsonException: The JSON value could not be converted to OptimalyChat.ServiceLayer.Interfaces.ChatCompletionChunk. Path: $ | LineNumber: 0 | BytePositionInLine: 1736.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at OptimalyChat.ServiceLayer.Services.LMStudioClient.StreamChatCompletionAsync(ChatCompletionRequest request, CancellationToken cancellationToken)+MoveNext() in /Users/lewi/DevelopmentLocal/OptimalyChat/OptimalyChat.ServiceLayer/Services/LMStudioClient.cs:line 134
+[10:37:23 INF] AI streaming response completed {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 15, "EnvironmentName": "Development"}
+[10:38:19 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "b0aa73c0-9709-41d1-92c4-8a89555e3e4f", "ActionName": "OptimalyChat.PresentationLayer.Controllers.SettingsController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NU:00000005", "RequestPath": "/Settings", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 20, "EnvironmentName": "Development"}
+[10:38:19 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "b0aa73c0-9709-41d1-92c4-8a89555e3e4f", "ActionName": "OptimalyChat.PresentationLayer.Controllers.SettingsController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NU:00000005", "RequestPath": "/Settings", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 20, "EnvironmentName": "Development"}
+[10:38:19 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "b0aa73c0-9709-41d1-92c4-8a89555e3e4f", "ActionName": "OptimalyChat.PresentationLayer.Controllers.SettingsController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NU:00000005", "RequestPath": "/Settings", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:38:19 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "b0aa73c0-9709-41d1-92c4-8a89555e3e4f", "ActionName": "OptimalyChat.PresentationLayer.Controllers.SettingsController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NU:00000005", "RequestPath": "/Settings", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 20, "EnvironmentName": "Development"}
+[10:38:19 INF] HTTP GET /Settings responded 200 in 35.9282 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NU:00000005", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 20, "EnvironmentName": "Development"}
+[10:38:19 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:38:19 INF] Client -aHrnajP6CT4bz74f0ahpQ disconnected {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-aHrnajP6CT4bz74f0ahpQ", "RequestId": "0HNEJVCU6O3O1:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:38:19 INF] HTTP GET /chathub responded 101 in 77604.6962 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O1:00000001", "ConnectionId": "0HNEJVCU6O3O1", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NU:00000006", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NU:00000006", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3NU:00000006", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] HTTP GET /Chat responded 200 in 19.8076 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NU:00000006", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] HTTP GET /js/signalr/dist/browser/signalr.min.js responded 200 in 0.9298 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O3:00000001", "ConnectionId": "0HNEJVCU6O3O3", "MachineName": "jiri-macbookpro", "ThreadId": 23, "EnvironmentName": "Development"}
+[10:39:15 INF] HTTP GET /js/chat.js responded 200 in 0.9289 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NU:00000007", "ConnectionId": "0HNEJVCU6O3NU", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] HTTP POST /chathub/negotiate responded 200 in 0.4270 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O3:00000002", "ConnectionId": "0HNEJVCU6O3O3", "MachineName": "jiri-macbookpro", "ThreadId": 23, "EnvironmentName": "Development"}
+[10:39:15 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] Client WceyGSbRUWpLqz-BPE8vZQ connected, User: jiri.maly@optimaly.net, UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, UserId from Claim: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:15 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:21 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:21 INF] SendMessage called - ProjectId: 2, ConversationId: 3, Message: jak je? {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:21 INF] UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, User: jiri.maly@optimaly.net {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:21 INF] Project lookup - Project: 2, UserId: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:21 INF] Starting AI streaming response {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:21 INF] StreamResponseAsync called - ProjectId: 2, ConversationId: 3, Message: jak je? {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:39:21 INF] Using AI model: google/gemma-3-27b {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 24, "EnvironmentName": "Development"}
+[10:39:21 INF] Sending request to LM Studio - Model: google/gemma-3-27b, Messages count: 12 {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 24, "EnvironmentName": "Development"}
+[10:39:24 INF] AI streaming response completed {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 24, "EnvironmentName": "Development"}
+[10:39:41 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 25, "EnvironmentName": "Development"}
+[10:39:41 INF] SendMessage called - ProjectId: 2, ConversationId: 3, Message: a co ty? {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 25, "EnvironmentName": "Development"}
+[10:39:41 INF] UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, User: jiri.maly@optimaly.net {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 25, "EnvironmentName": "Development"}
+[10:39:41 INF] Project lookup - Project: 2, UserId: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 25, "EnvironmentName": "Development"}
+[10:39:41 INF] Starting AI streaming response {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 25, "EnvironmentName": "Development"}
+[10:39:41 INF] StreamResponseAsync called - ProjectId: 2, ConversationId: 3, Message: a co ty? {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 25, "EnvironmentName": "Development"}
+[10:39:41 INF] Using AI model: google/gemma-3-12b {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 24, "EnvironmentName": "Development"}
+[10:39:41 INF] Sending request to LM Studio - Model: google/gemma-3-12b, Messages count: 12 {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 24, "EnvironmentName": "Development"}
+[10:39:42 INF] AI streaming response completed {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 22, "EnvironmentName": "Development"}
+[10:40:03 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:40:03 INF] SendMessage called - ProjectId: 2, ConversationId: 3, Message: co ty kodere? {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:40:03 INF] UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, User: jiri.maly@optimaly.net {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:40:03 INF] Project lookup - Project: 2, UserId: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:40:03 INF] Starting AI streaming response {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:40:03 INF] StreamResponseAsync called - ProjectId: 2, ConversationId: 3, Message: co ty kodere? {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:40:03 INF] Using AI model: qwen/qwen2.5-coder-14b {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:40:03 INF] Sending request to LM Studio - Model: qwen/qwen2.5-coder-14b, Messages count: 12 {"SourceContext": "OptimalyChat.ServiceLayer.Services.AIService", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 18, "EnvironmentName": "Development"}
+[10:40:05 INF] AI streaming response completed {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 26, "EnvironmentName": "Development"}
+[10:43:10 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O5:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O5", "MachineName": "jiri-macbookpro", "ThreadId": 31, "EnvironmentName": "Development"}
+[10:43:10 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O5:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O5", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:43:10 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O5:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O5", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:43:11 INF] HTTP GET /Chat responded 200 in 895.9310 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O5:00000001", "ConnectionId": "0HNEJVCU6O3O5", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:43:11 INF] HTTP GET /js/signalr/dist/browser/signalr.min.js responded 200 in 0.5024 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O5:00000002", "ConnectionId": "0HNEJVCU6O3O5", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:43:11 INF] HTTP GET /js/chat.js responded 200 in 0.4747 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O6:00000001", "ConnectionId": "0HNEJVCU6O3O6", "MachineName": "jiri-macbookpro", "ThreadId": 42, "EnvironmentName": "Development"}
+[10:43:11 INF] HTTP POST /chathub/negotiate responded 200 in 0.3930 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O5:00000003", "ConnectionId": "0HNEJVCU6O3O5", "MachineName": "jiri-macbookpro", "ThreadId": 42, "EnvironmentName": "Development"}
+[10:43:11 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O7", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:43:11 INF] Client VjnbVWpYnWGUMSVcu8aEQQ connected, User: jiri.maly@optimaly.net, UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, UserId from Claim: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:43:11 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O7", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:43:11 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O7", "MachineName": "jiri-macbookpro", "ThreadId": 35, "EnvironmentName": "Development"}

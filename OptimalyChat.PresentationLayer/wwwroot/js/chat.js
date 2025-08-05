@@ -146,17 +146,27 @@
         // Clear input
         document.getElementById('messageInput').value = '';
 
+        // Get selected model name
+        const modelSelector = document.getElementById('modelSelector');
+        const selectedOption = modelSelector ? modelSelector.options[modelSelector.selectedIndex] : null;
+        const modelName = selectedOption ? selectedOption.text : null;
+
         // Show typing indicator
         const indicator = document.getElementById('typingIndicator');
         indicator.classList.remove('d-none');
-
+        
+        // Update typing indicator with model name
+        const typingModelName = indicator.querySelector('.direct-chat-name');
+        if (typingModelName && modelName) {
+            typingModelName.textContent = modelName;
+        }
+        
         // Create AI message container
         const aiMessageId = 'ai-message-' + Date.now();
-        addMessageToUI('assistant', '', new Date(), aiMessageId);
+        addMessageToUI('assistant', '', new Date(), aiMessageId, modelName);
 
         try {
             // Get selected model
-            const modelSelector = document.getElementById('modelSelector');
             const selectedModelId = modelSelector ? parseInt(modelSelector.value) : null;
             
             // Use SignalR streaming
@@ -199,7 +209,7 @@
     }
 
     // Add message to UI
-    function addMessageToUI(role, content, timestamp, messageId) {
+    function addMessageToUI(role, content, timestamp, messageId, modelName) {
         const messagesContainer = document.getElementById('messagesContainer');
         const messageDiv = document.createElement('div');
         messageDiv.className = `direct-chat-msg ${role === 'user' ? 'right' : ''}`;
@@ -211,7 +221,7 @@
         infosDiv.className = 'direct-chat-infos clearfix';
         infosDiv.innerHTML = `
             <span class="direct-chat-name ${role === 'user' ? 'float-right' : 'float-left'}">
-                ${role === 'user' ? 'You' : 'AI Assistant'}
+                ${role === 'user' ? 'You' : (modelName || 'AI Assistant')}
             </span>
             <span class="direct-chat-timestamp ${role === 'user' ? 'float-left' : 'float-right'}">
                 ${timestamp.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
