@@ -80,17 +80,22 @@
         try {
             await connection.start();
             console.log('Connected to SignalR');
+            console.log('Connection state:', connection.state);
+            console.log('Connection ID:', connection.connectionId);
             showConnectionStatus('Connected', 'success');
 
             // Join current project and conversation
             if (currentProjectId) {
+                console.log('Joining project:', currentProjectId);
                 await connection.invoke('JoinProject', currentProjectId);
             }
             if (currentConversationId) {
+                console.log('Joining conversation:', currentConversationId);
                 await connection.invoke('JoinConversation', currentConversationId);
             }
         } catch (err) {
             console.error('Failed to connect to SignalR:', err);
+            console.error('Error details:', err.message, err.stack);
             showConnectionStatus('Failed to connect', 'danger');
         }
     }
@@ -103,6 +108,10 @@
 
     // Send message
     async function sendMessage(message) {
+        console.log('Sending message:', message);
+        console.log('Connection state:', connection ? connection.state : 'No connection');
+        console.log('Project ID:', currentProjectId, 'Conversation ID:', currentConversationId);
+        
         if (!connection || connection.state !== signalR.HubConnectionState.Connected) {
             alert('Not connected to server. Please refresh the page.');
             return;
@@ -134,30 +143,36 @@
         addMessageToUI('assistant', '', new Date(), aiMessageId);
 
         try {
-            // Stream the response
-            const stream = connection.stream('SendMessage', currentProjectId, currentConversationId, message);
+            // Use SignalR streaming
             let fullResponse = '';
-
-            stream.subscribe({
-                next: (chunk) => {
-                    fullResponse += chunk;
-                    updateMessageContent(aiMessageId, fullResponse);
-                    scrollToBottom();
-                },
-                complete: () => {
-                    console.log('Stream complete');
-                    isStreaming = false;
-                    indicator.classList.add('d-none');
-                    sendButton.disabled = false;
-                },
-                error: (err) => {
-                    console.error('Stream error:', err);
-                    isStreaming = false;
-                    indicator.classList.add('d-none');
-                    sendButton.disabled = false;
-                    updateMessageContent(aiMessageId, 'Error: ' + err.message);
-                }
-            });
+            
+            console.log('Starting stream with:', { currentProjectId, currentConversationId, message });
+            
+            connection.stream('SendMessage', currentProjectId, currentConversationId, message)
+                .subscribe({
+                    next: (chunk) => {
+                        console.log('Received chunk:', chunk);
+                        fullResponse += chunk;
+                        updateMessageContent(aiMessageId, fullResponse);
+                        scrollToBottom();
+                    },
+                    complete: () => {
+                        console.log('Stream complete, full response:', fullResponse);
+                        isStreaming = false;
+                        indicator.classList.add('d-none');
+                        sendButton.disabled = false;
+                    },
+                    error: (err) => {
+                        console.error('Stream error:', err);
+                        console.error('Error type:', err.constructor.name);
+                        console.error('Error message:', err.message);
+                        console.error('Error stack:', err.stack);
+                        isStreaming = false;
+                        indicator.classList.add('d-none');
+                        sendButton.disabled = false;
+                        updateMessageContent(aiMessageId, 'Error: ' + (err.message || err.toString()));
+                    }
+                });
         } catch (err) {
             console.error('Failed to send message:', err);
             isStreaming = false;
@@ -171,31 +186,39 @@
     function addMessageToUI(role, content, timestamp, messageId) {
         const messagesContainer = document.getElementById('messagesContainer');
         const messageDiv = document.createElement('div');
-        messageDiv.className = `message mb-3 ${role === 'user' ? 'text-end' : ''}`;
+        messageDiv.className = `direct-chat-msg ${role === 'user' ? 'right' : ''}`;
         if (messageId) {
             messageDiv.id = messageId;
         }
 
-        const messageContent = document.createElement('div');
-        messageContent.className = `d-inline-block p-3 rounded ${role === 'user' ? 'bg-primary text-white' : 'bg-light'}`;
-        messageContent.style.maxWidth = '70%';
-
-        const header = document.createElement('div');
-        header.className = 'mb-1';
-        header.innerHTML = `
-            <strong>${role === 'user' ? 'You' : 'AI'}</strong>
-            <small class="ms-2 ${role === 'user' ? 'text-white-50' : 'text-muted'}">
+        const infosDiv = document.createElement('div');
+        infosDiv.className = 'direct-chat-infos clearfix';
+        infosDiv.innerHTML = `
+            <span class="direct-chat-name ${role === 'user' ? 'float-right' : 'float-left'}">
+                ${role === 'user' ? 'You' : 'AI Assistant'}
+            </span>
+            <span class="direct-chat-timestamp ${role === 'user' ? 'float-left' : 'float-right'}">
                 ${timestamp.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
-            </small>
+            </span>
         `;
 
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'message-content';
-        contentDiv.textContent = content;
+        const img = document.createElement('img');
+        img.className = 'direct-chat-img';
+        img.src = role === 'user' 
+            ? 'https://ui-avatars.com/api/?name=You&background=007bff&color=fff'
+            : 'https://ui-avatars.com/api/?name=AI&background=17a2b8&color=fff';
+        img.alt = role === 'user' ? 'You' : 'AI';
 
-        messageContent.appendChild(header);
-        messageContent.appendChild(contentDiv);
-        messageDiv.appendChild(messageContent);
+        const textDiv = document.createElement('div');
+        textDiv.className = 'direct-chat-text';
+        const contentSpan = document.createElement('span');
+        contentSpan.className = 'message-content';
+        contentSpan.textContent = content;
+        textDiv.appendChild(contentSpan);
+
+        messageDiv.appendChild(infosDiv);
+        messageDiv.appendChild(img);
+        messageDiv.appendChild(textDiv);
 
         // Insert before typing indicator
         const typingIndicator = document.getElementById('typingIndicator');
@@ -208,21 +231,21 @@
     function updateMessageContent(messageId, content) {
         const messageElement = document.getElementById(messageId);
         if (messageElement) {
-            const contentDiv = messageElement.querySelector('.message-content');
-            if (contentDiv) {
-                contentDiv.textContent = content;
+            const contentSpan = messageElement.querySelector('.message-content');
+            if (contentSpan) {
+                contentSpan.textContent = content;
             }
         }
     }
 
     // Append to last AI message
     function appendToLastAIMessage(chunk) {
-        const messages = document.querySelectorAll('.message:not(.text-end)');
+        const messages = document.querySelectorAll('.direct-chat-msg:not(.right)');
         if (messages.length > 0) {
             const lastMessage = messages[messages.length - 1];
-            const contentDiv = lastMessage.querySelector('.message-content');
-            if (contentDiv) {
-                contentDiv.textContent += chunk;
+            const contentSpan = lastMessage.querySelector('.message-content');
+            if (contentSpan) {
+                contentSpan.textContent += chunk;
                 scrollToBottom();
             }
         }
@@ -282,10 +305,7 @@
 
         try {
             const response = await fetch(`/Chat/DeleteConversation/${currentConversationId}`, {
-                method: 'DELETE',
-                headers: {
-                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
-                }
+                method: 'DELETE'
             });
 
             if (response.ok) {

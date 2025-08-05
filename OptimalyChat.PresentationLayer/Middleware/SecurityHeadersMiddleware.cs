@@ -28,11 +28,11 @@ public class SecurityHeadersMiddleware
         
         // Content Security Policy - restrictive but allows AdminLTE and FontAwesome to work
         var csp = "default-src 'self'; " +
-                  "script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.jsdelivr.net cdnjs.cloudflare.com; " +
+                  "script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.jsdelivr.net cdnjs.cloudflare.com unpkg.com; " +
                   "style-src 'self' 'unsafe-inline' cdn.jsdelivr.net cdnjs.cloudflare.com fonts.googleapis.com; " +
                   "font-src 'self' fonts.gstatic.com cdn.jsdelivr.net cdnjs.cloudflare.com; " +
-                  "img-src 'self' data: cdn.jsdelivr.net via.placeholder.com blob:; " +
-                  "connect-src 'self'; " +
+                  "img-src 'self' data: cdn.jsdelivr.net via.placeholder.com blob: https:; " +
+                  "connect-src 'self' ws: wss: http://localhost:1234; " +
                   "frame-ancestors 'none';";
         
         context.Response.Headers.Append("Content-Security-Policy", csp);

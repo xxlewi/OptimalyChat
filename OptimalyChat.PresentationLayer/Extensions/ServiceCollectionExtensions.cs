@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
 using OptimalyChat.DataLayer.Data;
 using OptimalyChat.DataLayer.Entities;
 using OptimalyChat.PresentationLayer.Mapping;
+using OptimalyChat.PresentationLayer.Services;
 
 namespace OptimalyChat.PresentationLayer.Extensions;
 
@@ -41,6 +43,9 @@ public static class ServiceCollectionExtensions
         
         // Add Razor Pages for Identity UI
         services.AddRazorPages();
+        
+        // Configure SignalR with custom UserIdProvider
+        services.AddSingleton<IUserIdProvider, CustomUserIdProvider>();
         
         return services;
     }

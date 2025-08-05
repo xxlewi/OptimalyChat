@@ -209,4 +209,40 @@ public class ChatController : Controller
             return StatusCode(500, new { error = "Failed to get project statistics" });
         }
     }
+    
+    /// <summary>
+    /// Delete a conversation
+    /// </summary>
+    [HttpDelete]
+    public async Task<IActionResult> DeleteConversation(int id)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized();
+        }
+
+        try
+        {
+            var conversation = await _conversationService.GetByIdAsync(id);
+            if (conversation == null)
+            {
+                return NotFound();
+            }
+
+            var project = await _projectService.GetByIdAsync(conversation.ProjectId);
+            if (project == null || project.UserId != userId)
+            {
+                return Unauthorized();
+            }
+
+            await _conversationService.DeleteConversationAsync(id);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error deleting conversation");
+            return StatusCode(500, new { error = "Failed to delete conversation" });
+        }
+    }
 }

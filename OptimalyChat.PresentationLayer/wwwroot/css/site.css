@@ -37,12 +37,12 @@ body {
 }
 
 .typing-dots span {
-  height: 8px;
-  width: 8px;
-  background-color: #6c757d;
+  height: 10px;
+  width: 10px;
+  background-color: #007bff;
   border-radius: 50%;
   display: inline-block;
-  margin: 0 2px;
+  margin: 0 3px;
   animation: typing 1.4s infinite;
 }
 

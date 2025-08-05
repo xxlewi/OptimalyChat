@@ -33,7 +33,8 @@ public class ChatHub : Hub
     /// </summary>
     public override async Task OnConnectedAsync()
     {
-        _logger.LogInformation("Client {ConnectionId} connected", Context.ConnectionId);
+        _logger.LogInformation("Client {ConnectionId} connected, User: {User}, UserIdentifier: {UserIdentifier}", 
+            Context.ConnectionId, Context.User?.Identity?.Name, Context.UserIdentifier);
         await base.OnConnectedAsync();
     }
 
@@ -123,16 +124,25 @@ public class ChatHub : Hub
         string message,
         [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
+        _logger.LogInformation("SendMessage called - ProjectId: {ProjectId}, ConversationId: {ConversationId}, Message: {Message}", 
+            projectId, conversationId, message);
+            
         var userId = Context.UserIdentifier;
+        _logger.LogInformation("UserIdentifier: {UserId}, User: {User}", userId, Context.User?.Identity?.Name);
+        
         if (string.IsNullOrEmpty(userId))
         {
+            _logger.LogError("User not authenticated - UserIdentifier is null or empty");
             throw new HubException("User not authenticated");
         }
 
         // Verify access
         var project = await _projectService.GetByIdAsync(projectId, cancellationToken);
+        _logger.LogInformation("Project lookup - Project: {Project}, UserId: {UserId}", project?.Id, project?.UserId);
+        
         if (project == null || project.UserId != userId)
         {
+            _logger.LogError("Access denied - Project is null or user mismatch");
             throw new HubException("Access denied to project");
         }
 
@@ -140,17 +150,22 @@ public class ChatHub : Hub
         await Clients.OthersInGroup($"conversation-{conversationId}")
             .SendAsync("AITyping", conversationId, true, cancellationToken);
 
+        _logger.LogInformation("Starting AI streaming response");
+        
         try
         {
             // Stream the response
             await foreach (var chunk in _aiService.StreamResponseAsync(projectId, conversationId, message, cancellationToken))
             {
+                _logger.LogDebug("Streaming chunk: {Chunk}", chunk);
                 yield return chunk;
                 
                 // Also send to other clients in the conversation
                 await Clients.OthersInGroup($"conversation-{conversationId}")
                     .SendAsync("ReceiveMessageChunk", conversationId, chunk, cancellationToken);
             }
+            
+            _logger.LogInformation("AI streaming response completed");
         }
         finally
         {
