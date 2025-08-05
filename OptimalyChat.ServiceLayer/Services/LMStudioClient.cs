@@ -26,8 +26,12 @@ public class LMStudioClient : ILMStudioClient
         
         // Configure base URL
         var baseUrl = _configuration["LMStudio:BaseUrl"] ?? "http://localhost:1234/v1";
+        if (!baseUrl.EndsWith("/"))
+            baseUrl += "/";
         _httpClient.BaseAddress = new Uri(baseUrl);
         _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+        
+        _logger.LogInformation("LMStudioClient configured with base URL: {BaseUrl}", baseUrl);
         
         _jsonOptions = new JsonSerializerOptions
         {
@@ -43,10 +47,12 @@ public class LMStudioClient : ILMStudioClient
     {
         try
         {
-            var response = await _httpClient.GetAsync("/models", cancellationToken);
+            _logger.LogInformation("Getting models from LM Studio at: {BaseAddress}", _httpClient.BaseAddress);
+            var response = await _httpClient.GetAsync("models", cancellationToken);
             response.EnsureSuccessStatusCode();
             
             var content = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogInformation("LM Studio models response: {Content}", content);
             var result = JsonSerializer.Deserialize<ModelsResponse>(content, _jsonOptions);
             
             return result?.Data ?? new List<LMStudioModel>();
@@ -70,7 +76,7 @@ public class LMStudioClient : ILMStudioClient
             var json = JsonSerializer.Serialize(request, _jsonOptions);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             
-            var response = await _httpClient.PostAsync("/chat/completions", content, cancellationToken);
+            var response = await _httpClient.PostAsync("chat/completions", content, cancellationToken);
             response.EnsureSuccessStatusCode();
             
             var responseContent = await response.Content.ReadAsStringAsync(cancellationToken);
@@ -97,7 +103,7 @@ public class LMStudioClient : ILMStudioClient
         var json = JsonSerializer.Serialize(request, _jsonOptions);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
         
-        var requestMessage = new HttpRequestMessage(HttpMethod.Post, "/chat/completions")
+        var requestMessage = new HttpRequestMessage(HttpMethod.Post, "chat/completions")
         {
             Content = content
         };
@@ -146,7 +152,7 @@ public class LMStudioClient : ILMStudioClient
     {
         try
         {
-            var response = await _httpClient.GetAsync("/models", cancellationToken);
+            var response = await _httpClient.GetAsync("models", cancellationToken);
             return response.IsSuccessStatusCode;
         }
         catch (Exception ex)

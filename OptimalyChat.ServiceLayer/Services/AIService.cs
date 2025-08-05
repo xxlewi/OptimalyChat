@@ -127,12 +127,19 @@ public class AIService : IAIService
         string message, 
         [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
+        _logger.LogInformation("StreamResponseAsync called - ProjectId: {ProjectId}, ConversationId: {ConversationId}, Message: {Message}", 
+            projectId, conversationId, message);
+            
         // Get conversation and validate
         var conversationRepo = _unitOfWork.GetRepository<Conversation, int>();
         var conversation = await conversationRepo.GetByIdAsync(conversationId, cancellationToken);
         
         if (conversation == null || conversation.ProjectId != projectId)
+        {
+            _logger.LogError("Conversation not found or project mismatch - ConversationId: {ConversationId}, ProjectId: {ProjectId}", 
+                conversationId, projectId);
             throw new NotFoundException($"Conversation {conversationId} not found in project {projectId}");
+        }
         
         // Save user message
         var userMessage = new Message
@@ -155,6 +162,7 @@ public class AIService : IAIService
         
         // Get AI model
         var model = await GetDefaultModelAsync(cancellationToken);
+        _logger.LogInformation("Using AI model: {Model}", model.ModelId);
         
         // Call LM Studio with streaming
         var request = new ChatCompletionRequest
@@ -166,6 +174,9 @@ public class AIService : IAIService
             Stream = true
         };
         
+        _logger.LogInformation("Sending request to LM Studio - Model: {Model}, Messages count: {Count}", 
+            request.Model, messages.Count);
+        
         var startTime = DateTime.UtcNow;
         var responseBuilder = new StringBuilder();
         var tokenCount = 0;
@@ -175,6 +186,7 @@ public class AIService : IAIService
             var content = chunk.Choices.FirstOrDefault()?.Delta?.Content;
             if (!string.IsNullOrEmpty(content))
             {
+                _logger.LogDebug("Received chunk: {Content}", content);
                 responseBuilder.Append(content);
                 tokenCount++;
                 yield return content;
@@ -332,6 +344,9 @@ public class AIService : IAIService
     {
         var modelRepo = _unitOfWork.GetRepository<AIModel, int>();
         
+        // First sync models from LM Studio
+        await SyncModelsFromLMStudioAsync(cancellationToken);
+        
         var model = await modelRepo.Query
             .Where(m => m.IsDefault && m.IsActive)
             .FirstOrDefaultAsync(cancellationToken);
@@ -346,7 +361,48 @@ public class AIService : IAIService
         if (model == null)
             throw new BusinessException("No active AI model found", "NO_AI_MODEL");
         
+        _logger.LogInformation("Using AI model: {ModelId} - {ModelName}", model.ModelId, model.Name);
         return model;
+    }
+    
+    private async Task SyncModelsFromLMStudioAsync(CancellationToken cancellationToken)
+    {
+        try
+        {
+            var lmModels = await _lmStudioClient.GetModelsAsync(cancellationToken);
+            var modelRepo = _unitOfWork.GetRepository<AIModel, int>();
+            
+            foreach (var lmModel in lmModels)
+            {
+                var existingModel = await modelRepo.Query
+                    .Where(m => m.ModelId == lmModel.Id)
+                    .FirstOrDefaultAsync(cancellationToken);
+                
+                if (existingModel == null)
+                {
+                    var newModel = new AIModel
+                    {
+                        Name = lmModel.Id,
+                        ModelId = lmModel.Id,
+                        Provider = "LMStudio",
+                        Endpoint = _configuration["LMStudio:BaseUrl"] ?? "http://localhost:1234/v1",
+                        MaxTokens = 4096,
+                        Temperature = 0.7,
+                        IsActive = true,
+                        IsDefault = !await modelRepo.Query.AnyAsync(m => m.IsDefault, cancellationToken)
+                    };
+                    
+                    await modelRepo.AddAsync(newModel, cancellationToken);
+                    _logger.LogInformation("Added new AI model from LM Studio: {ModelId}", lmModel.Id);
+                }
+            }
+            
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning(ex, "Failed to sync models from LM Studio");
+        }
     }
 
     private int EstimateTokenCount(string text)

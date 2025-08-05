@@ -35,9 +35,20 @@ public class TestAIController : ControllerBase
     [HttpPost("test-chat")]
     public async Task<IActionResult> TestChat([FromBody] TestChatRequest request)
     {
+        // Get available models from LM Studio first
+        var models = await _lmStudioClient.GetModelsAsync();
+        var firstModel = models.FirstOrDefault();
+        
+        if (firstModel == null)
+        {
+            return BadRequest(new { error = "No models available in LM Studio" });
+        }
+        
+        _logger.LogInformation("Using model: {ModelId}", firstModel.Id);
+        
         var chatRequest = new ChatCompletionRequest
         {
-            Model = "qwen2.5-coder-14b-instruct",
+            Model = firstModel.Id,
             Messages = new List<ChatMessage>
             {
                 new ChatMessage { Role = "system", Content = "You are a helpful assistant." },
@@ -48,6 +59,33 @@ public class TestAIController : ControllerBase
 
         var response = await _lmStudioClient.CreateChatCompletionAsync(chatRequest);
         return Ok(response);
+    }
+
+    [HttpGet("available-models")]
+    public async Task<IActionResult> GetAvailableModels()
+    {
+        try
+        {
+            var models = await _aiService.GetAvailableModelsAsync();
+            return Ok(models);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error getting available models");
+            return StatusCode(500, new { error = ex.Message });
+        }
+    }
+
+    [HttpPost("test-stream")]
+    public async IAsyncEnumerable<string> TestStream([FromBody] TestChatRequest request)
+    {
+        _logger.LogInformation("Test stream called with message: {Message}", request.Message);
+        
+        // Use the AIService directly to test streaming
+        await foreach (var chunk in _aiService.StreamResponseAsync(1, 1, request.Message))
+        {
+            yield return chunk;
+        }
     }
 }
 

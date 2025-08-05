@@ -125,6 +125,7 @@ try
         .WithStaticAssets();
 
     app.MapRazorPages();
+    app.MapControllers();
 
     // Health check endpoints
     app.MapHealthChecks("/health", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
