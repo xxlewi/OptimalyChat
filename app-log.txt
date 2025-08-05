@@ -1090,3 +1090,2104 @@ System.Text.Json.JsonException: The JSON value could not be converted to Optimal
 [10:43:11 INF] Client VjnbVWpYnWGUMSVcu8aEQQ connected, User: jiri.maly@optimaly.net, UserIdentifier: a08e08d1-92f2-403d-9664-0cae5b4c8b16, UserId from Claim: a08e08d1-92f2-403d-9664-0cae5b4c8b16 {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
 [10:43:11 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O7", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
 [10:43:11 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O7", "MachineName": "jiri-macbookpro", "ThreadId": 35, "EnvironmentName": "Development"}
+[10:48:31 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:48:31 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:48:31 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:48:31 ERR] HTTP GET /Chat responded 500 in 130.8656 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000001", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[10:48:31 ERR] Došlo k neočekávané chybě {"SourceContext": "OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware", "RequestId": "0HNEJVCU6O3O8:00000001", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context)
+[10:49:11 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000002", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:49:11 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000002", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:11 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000002", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:11 ERR] HTTP GET /Chat responded 500 in 17.2548 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000002", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[10:49:11 ERR] Došlo k neočekávané chybě {"SourceContext": "OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware", "RequestId": "0HNEJVCU6O3O8:00000002", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context)
+[10:49:11 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000003", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:11 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000003", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:11 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000003", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:11 ERR] HTTP GET /Chat responded 500 in 13.5374 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000003", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[10:49:11 ERR] Došlo k neočekávané chybě {"SourceContext": "OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware", "RequestId": "0HNEJVCU6O3O8:00000003", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context)
+[10:49:11 INF] HTTP GET /favicon.ico responded 200 in 0.4995 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000004", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:49:15 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O7", "MachineName": "jiri-macbookpro", "ThreadId": 32, "EnvironmentName": "Development"}
+[10:49:15 INF] Client VjnbVWpYnWGUMSVcu8aEQQ disconnected {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "VjnbVWpYnWGUMSVcu8aEQQ", "RequestId": "0HNEJVCU6O3O7:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 32, "EnvironmentName": "Development"}
+[10:49:15 INF] HTTP GET /chathub responded 101 in 363741.6339 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O7:00000001", "ConnectionId": "0HNEJVCU6O3O7", "MachineName": "jiri-macbookpro", "ThreadId": 32, "EnvironmentName": "Development"}
+[10:49:16 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 32, "EnvironmentName": "Development"}
+[10:49:16 INF] Client WceyGSbRUWpLqz-BPE8vZQ disconnected {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "WceyGSbRUWpLqz-BPE8vZQ", "RequestId": "0HNEJVCU6O3O4:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 32, "EnvironmentName": "Development"}
+[10:49:16 INF] HTTP GET /chathub responded 101 in 600732.7278 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O4:00000001", "ConnectionId": "0HNEJVCU6O3O4", "MachineName": "jiri-macbookpro", "ThreadId": 32, "EnvironmentName": "Development"}
+[10:49:16 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:16 INF] Client -D_uSjbCorxURqq-JpU_8w disconnected {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "-D_uSjbCorxURqq-JpU_8w", "RequestId": "0HNEJVCU6O3NV:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:16 INF] HTTP GET /chathub responded 101 in 740081.5458 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3NV:00000001", "ConnectionId": "0HNEJVCU6O3NV", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:16 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "EhwzEhSf0TvpUv0Gn9v5kA", "RequestId": "0HNEJVCU6O3O0:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O0", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:49:16 INF] Client EhwzEhSf0TvpUv0Gn9v5kA disconnected {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "EhwzEhSf0TvpUv0Gn9v5kA", "RequestId": "0HNEJVCU6O3O0:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:49:16 INF] HTTP GET /chathub responded 101 in 735172.8156 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O0:00000001", "ConnectionId": "0HNEJVCU6O3O0", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:49:17 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "TransportConnectionId": "lCpS97uFwANY0Bujt2V1sA", "RequestId": "0HNEJVCU6O3O2:00000001", "RequestPath": "/chathub", "ConnectionId": "0HNEJVCU6O3O2", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:17 INF] Client lCpS97uFwANY0Bujt2V1sA disconnected {"SourceContext": "OptimalyChat.PresentationLayer.Hubs.ChatHub", "TransportConnectionId": "lCpS97uFwANY0Bujt2V1sA", "RequestId": "0HNEJVCU6O3O2:00000001", "RequestPath": "/chathub", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:17 INF] HTTP GET /chathub responded 101 in 720945.4984 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O2:00000001", "ConnectionId": "0HNEJVCU6O3O2", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:22 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "b0aa73c0-9709-41d1-92c4-8a89555e3e4f", "ActionName": "OptimalyChat.PresentationLayer.Controllers.SettingsController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000005", "RequestPath": "/Settings", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:22 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "b0aa73c0-9709-41d1-92c4-8a89555e3e4f", "ActionName": "OptimalyChat.PresentationLayer.Controllers.SettingsController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000005", "RequestPath": "/Settings", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:22 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "b0aa73c0-9709-41d1-92c4-8a89555e3e4f", "ActionName": "OptimalyChat.PresentationLayer.Controllers.SettingsController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000005", "RequestPath": "/Settings", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:22 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "b0aa73c0-9709-41d1-92c4-8a89555e3e4f", "ActionName": "OptimalyChat.PresentationLayer.Controllers.SettingsController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000005", "RequestPath": "/Settings", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:22 INF] HTTP GET /Settings responded 200 in 17.0875 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000005", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:22 INF] HTTP GET /favicon.ico responded 200 in 0.6108 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000006", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:24 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000007", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:24 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000007", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:24 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000007", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:24 ERR] HTTP GET /Chat responded 500 in 15.2047 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000007", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[10:49:24 ERR] Došlo k neočekávané chybě {"SourceContext": "OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware", "RequestId": "0HNEJVCU6O3O8:00000007", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context)
+[10:49:29 INF] HTTP GET / responded 302 in 0.5158 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000008", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:29 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000009", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:29 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000009", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:29 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:00000009", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:29 ERR] HTTP GET /Chat responded 500 in 8.8522 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:00000009", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[10:49:29 ERR] Došlo k neočekávané chybě {"SourceContext": "OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware", "RequestId": "0HNEJVCU6O3O8:00000009", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context)
+[10:49:30 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000A", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:30 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000A", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:30 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000A", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:30 ERR] HTTP GET /Chat responded 500 in 14.5878 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000A", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[10:49:30 ERR] Došlo k neočekávané chybě {"SourceContext": "OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000A", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context)
+[10:49:30 INF] HTTP GET /favicon.ico responded 200 in 0.5210 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000B", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:30 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000C", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:31 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000C", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:31 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000C", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:31 ERR] HTTP GET /Chat responded 500 in 10.7755 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000C", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[10:49:31 ERR] Došlo k neočekávané chybě {"SourceContext": "OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000C", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context)
+[10:49:31 INF] HTTP GET /favicon.ico responded 200 in 0.5371 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000D", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 47, "EnvironmentName": "Development"}
+[10:49:43 INF] HTTP HEAD /Chat responded 404 in 0.1450 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "curl/8.7.1", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3OA:00000001", "ConnectionId": "0HNEJVCU6O3OA", "MachineName": "jiri-macbookpro", "ThreadId": 49, "EnvironmentName": "Development"}
+[10:49:47 INF] LMStudioClient configured with base URL: http://localhost:1234/v1/ {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000E", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:49:47 INF] Getting loaded models from LM Studio at: http://localhost:1234/api/v0/models {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000E", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:49:47 INF] LM Studio loaded models response: {
+  "data": [
+    {
+      "id": "google/gemma-3-12b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 131072
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 32768,
+      "loaded_context_length": 32768
+    },
+    {
+      "id": "google/gemma-3-27b",
+      "object": "model",
+      "type": "vlm",
+      "publisher": "google",
+      "arch": "gemma3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "loaded",
+      "max_context_length": 131072,
+      "loaded_context_length": 4096
+    },
+    {
+      "id": "mixtral-8x7b-instruct-v0.1",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "mixtral",
+      "compatibility_type": "mlx",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "deepseek-coder-33b-instruct-hf-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 16384
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "mlx-community",
+      "arch": "llama",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-14b-instruct",
+      "object": "model",
+      "type": "llm",
+      "publisher": "Qwen",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 131072
+    },
+    {
+      "id": "qwen2.5-coder-32b-instruct-mlx@8bit",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "8bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct-mlx",
+      "object": "model",
+      "type": "llm",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "type": "embeddings",
+      "publisher": "nomic-ai",
+      "arch": "nomic-bert",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "state": "not-loaded",
+      "max_context_length": 2048
+    },
+    {
+      "id": "qwen/qwen2.5-coder-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 32768
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3_moe",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwen3-4b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen3",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 40960,
+      "capabilities": [
+        "tool_use"
+      ]
+    },
+    {
+      "id": "qwen/qwq-32b",
+      "object": "model",
+      "type": "llm",
+      "publisher": "qwen",
+      "arch": "qwen2",
+      "compatibility_type": "mlx",
+      "quantization": "4bit",
+      "state": "not-loaded",
+      "max_context_length": 131072,
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "object": "list"
+} {"SourceContext": "OptimalyChat.ServiceLayer.Services.LMStudioClient", "ActionId": "a34ab03a-e91e-403e-a996-0427bb20522a", "ActionName": "OptimalyChat.PresentationLayer.Controllers.ChatController.Index (OptimalyChat.PresentationLayer)", "RequestId": "0HNEJVCU6O3O8:0000000E", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+[10:49:47 ERR] HTTP GET /Chat responded 500 in 18.3706 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000E", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[10:49:47 ERR] Došlo k neočekávané chybě {"SourceContext": "OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000E", "RequestPath": "/Chat", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}
+System.InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'Styles'. To ignore an unrendered section call IgnoreSection("sectionName").
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureRenderedBodyOrSections()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at OptimalyChat.PresentationLayer.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context)
+[10:49:47 INF] HTTP GET /favicon.ico responded 200 in 0.5420 ms {"RequestHost": "localhost:5020", "RequestScheme": "http", "UserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "SourceContext": "Serilog.AspNetCore.RequestLoggingMiddleware", "RequestId": "0HNEJVCU6O3O8:0000000F", "ConnectionId": "0HNEJVCU6O3O8", "MachineName": "jiri-macbookpro", "ThreadId": 3, "EnvironmentName": "Development"}

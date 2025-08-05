@@ -156,7 +156,7 @@
         indicator.classList.remove('d-none');
         
         // Update typing indicator with model name
-        const typingModelName = indicator.querySelector('.direct-chat-name');
+        const typingModelName = indicator.querySelector('.message-model');
         if (typingModelName && modelName) {
             typingModelName.textContent = modelName;
         }
@@ -212,39 +212,38 @@
     function addMessageToUI(role, content, timestamp, messageId, modelName) {
         const messagesContainer = document.getElementById('messagesContainer');
         const messageDiv = document.createElement('div');
-        messageDiv.className = `direct-chat-msg ${role === 'user' ? 'right' : ''}`;
+        messageDiv.className = `message ${role}`;
         if (messageId) {
             messageDiv.id = messageId;
         }
 
-        const infosDiv = document.createElement('div');
-        infosDiv.className = 'direct-chat-infos clearfix';
-        infosDiv.innerHTML = `
-            <span class="direct-chat-name ${role === 'user' ? 'float-right' : 'float-left'}">
-                ${role === 'user' ? 'You' : (modelName || 'AI Assistant')}
-            </span>
-            <span class="direct-chat-timestamp ${role === 'user' ? 'float-left' : 'float-right'}">
-                ${timestamp.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
-            </span>
-        `;
+        const messageContent = document.createElement('div');
+        messageContent.className = 'message-content';
 
-        const img = document.createElement('img');
-        img.className = 'direct-chat-img';
-        img.src = role === 'user' 
-            ? 'https://ui-avatars.com/api/?name=You&background=007bff&color=fff'
-            : 'https://ui-avatars.com/api/?name=AI&background=17a2b8&color=fff';
-        img.alt = role === 'user' ? 'You' : 'AI';
-
-        const textDiv = document.createElement('div');
-        textDiv.className = 'direct-chat-text';
+        const messageBubble = document.createElement('div');
+        messageBubble.className = 'message-bubble';
         const contentSpan = document.createElement('span');
-        contentSpan.className = 'message-content';
+        contentSpan.className = 'message-text';
         contentSpan.textContent = content;
-        textDiv.appendChild(contentSpan);
+        messageBubble.appendChild(contentSpan);
 
-        messageDiv.appendChild(infosDiv);
-        messageDiv.appendChild(img);
-        messageDiv.appendChild(textDiv);
+        const messageInfo = document.createElement('div');
+        messageInfo.className = 'message-info';
+        
+        if (role === 'assistant' && modelName) {
+            messageInfo.innerHTML = `
+                <span class="message-model">${modelName}</span>
+                <span class="message-time">${timestamp.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</span>
+            `;
+        } else {
+            messageInfo.innerHTML = `
+                <span class="message-time">${timestamp.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</span>
+            `;
+        }
+
+        messageContent.appendChild(messageBubble);
+        messageContent.appendChild(messageInfo);
+        messageDiv.appendChild(messageContent);
 
         // Insert before typing indicator
         const typingIndicator = document.getElementById('typingIndicator');
@@ -257,7 +256,7 @@
     function updateMessageContent(messageId, content) {
         const messageElement = document.getElementById(messageId);
         if (messageElement) {
-            const contentSpan = messageElement.querySelector('.message-content');
+            const contentSpan = messageElement.querySelector('.message-text');
             if (contentSpan) {
                 contentSpan.textContent = content;
             }
@@ -392,6 +391,12 @@
         }
     }
 
+    // Auto-resize textarea
+    function autoResizeTextarea(textarea) {
+        textarea.style.height = 'auto';
+        textarea.style.height = (textarea.scrollHeight) + 'px';
+    }
+
     // Initialize on DOM ready
     document.addEventListener('DOMContentLoaded', () => {
         // Initialize configuration
@@ -407,5 +412,11 @@
         initializeSignalR();
         initializeEventHandlers();
         scrollToBottom();
+        
+        // Setup auto-resize for textarea
+        const messageInput = document.getElementById('messageInput');
+        if (messageInput) {
+            messageInput.addEventListener('input', () => autoResizeTextarea(messageInput));
+        }
     });
 })();

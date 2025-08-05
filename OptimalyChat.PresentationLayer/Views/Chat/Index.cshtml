@@ -4,69 +4,59 @@
     Layout = "_Layout";
 }
 
+@section Styles {
+    <link rel="stylesheet" href="~/css/chat.css" asp-append-version="true" />
+}
+
 <div class="row">
     <!-- Projects & Conversations Sidebar -->
     <div class="col-md-3">
-        <!-- Projects Card -->
-        <div class="card card-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title">
-                    <i class="fas fa-folder-open"></i> Projects
-                </h3>
-                <div class="card-tools">
-                    <a asp-action="CreateProject" class="btn btn-tool btn-sm">
-                        <i class="fas fa-plus"></i>
-                    </a>
-                </div>
+        <!-- Projects -->
+        <div class="projects-sidebar mb-3">
+            <div class="sidebar-header">
+                <h5><i class="fas fa-folder-open mr-2"></i>Projects</h5>
+                <a asp-action="CreateProject" class="btn btn-sm btn-primary">
+                    <i class="fas fa-plus"></i>
+                </a>
             </div>
-            <div class="card-body p-0">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-                    @foreach (var project in Model.Projects)
-                    {
-                        <li class="nav-item">
-                            <a href="@Url.Action("Index", new { projectId = project.Id })" 
-                               class="nav-link @(project.Id == Model.CurrentProject?.Id ? "active" : "")">
-                                <i class="nav-icon @(project.IsEncrypted ? "fas fa-lock" : "fas fa-folder")"></i>
-                                <p>@project.Name</p>
-                            </a>
-                        </li>
-                    }
-                </ul>
+            <div class="sidebar-body">
+                @foreach (var project in Model.Projects)
+                {
+                    <div class="project-item @(project.Id == Model.CurrentProject?.Id ? "active" : "")" 
+                         onclick="window.location.href='@Url.Action("Index", new { projectId = project.Id })'">
+                        <i class="@(project.IsEncrypted ? "fas fa-lock" : "fas fa-folder") mr-2"></i>
+                        @project.Name
+                    </div>
+                }
             </div>
         </div>
 
-        <!-- Conversations Card -->
+        <!-- Conversations -->
         @if (Model.CurrentProject != null)
         {
-            <div class="card card-info card-outline">
-                <div class="card-header">
-                    <h3 class="card-title">
-                        <i class="fas fa-comments"></i> Conversations
-                    </h3>
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool btn-sm" id="newConversation">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
+            <div class="projects-sidebar">
+                <div class="sidebar-header">
+                    <h5><i class="fas fa-comments mr-2"></i>Conversations</h5>
+                    <button type="button" class="btn btn-sm btn-primary" id="newConversation">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </div>
-                <div class="card-body p-0">
-                    <div class="list-group list-group-flush">
-                        @foreach (var conversation in Model.Conversations)
-                        {
-                            <a href="@Url.Action("Index", new { projectId = Model.CurrentProject.Id, conversationId = conversation.Id })" 
-                               class="list-group-item @(conversation.Id == Model.CurrentConversation?.Id ? "active" : "")">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">@conversation.Title</h5>
-                                    <small>@conversation.LastMessageAt?.ToString("MMM dd")</small>
-                                </div>
-                                @if (!string.IsNullOrEmpty(conversation.LastMessagePreview))
-                                {
-                                    <p class="mb-1 text-truncate">@conversation.LastMessagePreview</p>
-                                }
-                                <small>@conversation.MessageCount messages</small>
-                            </a>
-                        }
-                    </div>
+                <div class="sidebar-body">
+                    @foreach (var conversation in Model.Conversations)
+                    {
+                        <div class="conversation-item @(conversation.Id == Model.CurrentConversation?.Id ? "active" : "")" 
+                             onclick="window.location.href='@Url.Action("Index", new { projectId = Model.CurrentProject.Id, conversationId = conversation.Id })'">
+                            <div class="conversation-title">@conversation.Title</div>
+                            @if (!string.IsNullOrEmpty(conversation.LastMessagePreview))
+                            {
+                                <div class="conversation-preview">@conversation.LastMessagePreview</div>
+                            }
+                            <div class="conversation-meta">
+                                <span class="conversation-time">@conversation.LastMessageAt?.ToString("MMM dd")</span>
+                                <span class="message-count">@conversation.MessageCount</span>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
         }
@@ -76,43 +66,38 @@
     <div class="col-md-9">
         @if (Model.CurrentConversation != null)
         {
-            <!-- Direct Chat -->
-            <div class="card direct-chat direct-chat-primary" style="height: calc(100vh - 200px);">
-                <div class="card-header">
-                    <h3 class="card-title" id="conversationTitle">@Model.CurrentConversation.Title</h3>
-                    <div class="card-tools">
+            <div class="chat-container">
+                <!-- Chat Header -->
+                <div class="chat-header">
+                    <h3 id="conversationTitle">@Model.CurrentConversation.Title</h3>
+                    <div class="chat-tools">
                         <!-- Model Selector -->
-                        <div class="btn-group mr-2">
-                            <select id="modelSelector" class="form-control form-control-sm" style="min-width: 200px;">
-                                @if (Model.AvailableModels.Any())
+                        <select id="modelSelector" class="form-control form-control-sm">
+                            @if (Model.AvailableModels.Any())
+                            {
+                                @foreach (var aiModel in Model.AvailableModels)
                                 {
-                                    @foreach (var aiModel in Model.AvailableModels)
+                                    @if (aiModel.Id == Model.SelectedModelId)
                                     {
-                                        @if (aiModel.Id == Model.SelectedModelId)
-                                        {
-                                            <option value="@aiModel.Id" data-model-id="@aiModel.ModelId" selected>
-                                                @aiModel.Name
-                                            </option>
-                                        }
-                                        else
-                                        {
-                                            <option value="@aiModel.Id" data-model-id="@aiModel.ModelId">
-                                                @aiModel.Name
-                                            </option>
-                                        }
+                                        <option value="@aiModel.Id" data-model-id="@aiModel.ModelId" selected>
+                                            @aiModel.Name
+                                        </option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@aiModel.Id" data-model-id="@aiModel.ModelId">
+                                            @aiModel.Name
+                                        </option>
                                     }
                                 }
-                                else
-                                {
-                                    <option value="">No models available</option>
-                                }
-                            </select>
-                        </div>
+                            }
+                            else
+                            {
+                                <option value="">No models available</option>
+                            }
+                        </select>
                         <button type="button" class="btn btn-tool" id="editTitle" title="Edit title">
                             <i class="fas fa-pencil-alt"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
-                            <i class="fas fa-expand"></i>
                         </button>
                         <button type="button" class="btn btn-tool" id="deleteConversation" title="Delete conversation">
                             <i class="fas fa-trash"></i>
@@ -120,91 +105,89 @@
                     </div>
                 </div>
                 
-                <div class="card-body">
-                    <!-- Conversations -->
-                    <div class="direct-chat-messages" id="messagesContainer" style="height: calc(100vh - 350px); overflow-y: auto;">
-                        @foreach (var message in Model.Messages)
+                <!-- Messages Container -->
+                <div class="chat-messages" id="messagesContainer">
+                    @foreach (var message in Model.Messages)
+                    {
+                        if (message.Role == "user")
                         {
-                            if (message.Role == "user")
-                            {
-                                <!-- User Message -->
-                                <div class="direct-chat-msg right">
-                                    <div class="direct-chat-infos clearfix">
-                                        <span class="direct-chat-name float-right">You</span>
-                                        <span class="direct-chat-timestamp float-left">@message.CreatedAt.ToString("HH:mm")</span>
-                                    </div>
-                                    <img class="direct-chat-img" src="https://ui-avatars.com/api/?name=You&background=007bff&color=fff" alt="You">
-                                    <div class="direct-chat-text">
+                            <!-- User Message -->
+                            <div class="message user">
+                                <div class="message-content">
+                                    <div class="message-bubble">
                                         @message.Content
+                                    </div>
+                                    <div class="message-info">
+                                        <span class="message-time">@message.CreatedAt.ToString("HH:mm")</span>
                                         @if (message.TokenCount > 0)
                                         {
-                                            <small class="d-block text-muted mt-1">
-                                                <i class="fas fa-coins"></i> @message.TokenCount <text>tokens</text>
-                                            </small>
+                                            <span class="message-stats">
+                                                <i class="fas fa-coins"></i> @message.TokenCount
+                                            </span>
                                         }
                                     </div>
                                 </div>
-                            }
-                            else
-                            {
-                                <!-- AI Message -->
-                                <div class="direct-chat-msg">
-                                    <div class="direct-chat-infos clearfix">
-                                        <span class="direct-chat-name float-left">@(string.IsNullOrEmpty(message.Model) ? "AI Assistant" : message.Model)</span>
-                                        <span class="direct-chat-timestamp float-right">@message.CreatedAt.ToString("HH:mm")</span>
-                                    </div>
-                                    <img class="direct-chat-img" src="https://ui-avatars.com/api/?name=AI&background=17a2b8&color=fff" alt="AI">
-                                    <div class="direct-chat-text">
+                            </div>
+                        }
+                        else
+                        {
+                            <!-- AI Message -->
+                            <div class="message assistant">
+                                <div class="message-content">
+                                    <div class="message-bubble">
                                         @message.Content
+                                    </div>
+                                    <div class="message-info">
+                                        <span class="message-model">@(string.IsNullOrEmpty(message.Model) ? "AI Assistant" : message.Model)</span>
+                                        <span class="message-time">@message.CreatedAt.ToString("HH:mm")</span>
                                         @if (message.TokenCount > 0 || message.ResponseTimeMs.HasValue)
                                         {
-                                            <small class="d-block text-muted mt-1">
+                                            <span class="message-stats">
                                                 @if (message.TokenCount > 0)
                                                 {
-                                                    <span><i class="fas fa-coins"></i> @message.TokenCount <text>tokens</text></span>
+                                                    <span><i class="fas fa-coins"></i> @message.TokenCount</span>
                                                 }
                                                 @if (message.ResponseTimeMs.HasValue)
                                                 {
-                                                    <span class="ml-2"><i class="fas fa-clock"></i> @message.ResponseTimeMs.Value <text>ms</text></span>
+                                                    <span><i class="fas fa-clock"></i> @message.ResponseTimeMs.Value ms</span>
                                                 }
-                                            </small>
+                                            </span>
                                         }
                                     </div>
                                 </div>
-                            }
-                        }
-                        
-                        <!-- Typing Indicator -->
-                        <div id="typingIndicator" class="direct-chat-msg d-none">
-                            <div class="direct-chat-infos clearfix">
-                                <span class="direct-chat-name float-left">AI Assistant</span>
                             </div>
-                            <img class="direct-chat-img" src="https://ui-avatars.com/api/?name=AI&background=17a2b8&color=fff" alt="AI">
-                            <div class="direct-chat-text">
+                        }
+                    }
+                    
+                    <!-- Typing Indicator -->
+                    <div id="typingIndicator" class="message assistant d-none">
+                        <div class="message-content">
+                            <div class="typing-indicator">
                                 <div class="typing-dots">
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                 </div>
                             </div>
+                            <div class="message-info">
+                                <span class="message-model">AI Assistant</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Input Area -->
-                <div class="card-footer">
+                <div class="chat-input-area">
                     <form id="messageForm">
-                        <div class="input-group">
-                            <textarea id="messageInput" 
-                                      placeholder="Type your message..." 
-                                      class="form-control" 
-                                      rows="2"
-                                      style="resize: none;"></textarea>
-                            <span class="input-group-append">
-                                <button type="submit" class="btn btn-primary" id="sendButton">
-                                    <i class="fas fa-paper-plane"></i> Send
-                                </button>
-                            </span>
+                        <div class="chat-input-group">
+                            <div class="chat-input-wrapper">
+                                <textarea id="messageInput" 
+                                          placeholder="Type a message..." 
+                                          rows="1"></textarea>
+                            </div>
+                            <button type="submit" class="send-button" id="sendButton">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
                         </div>
                     </form>
                 </div>

@@ -120,6 +120,7 @@ public class ChatController : Controller
     /// Create a new project
     /// </summary>
     [HttpGet]
+    [Produces("text/html")]
     public IActionResult CreateProject()
     {
         var viewModel = new CreateProjectViewModel
@@ -136,6 +137,7 @@ public class ChatController : Controller
     /// </summary>
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [Produces("text/html")]
     public async Task<IActionResult> CreateProject(CreateProjectViewModel model)
     {
         if (!ModelState.IsValid)

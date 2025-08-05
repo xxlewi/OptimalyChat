@@ -2,6 +2,10 @@
     Layout = "_AdminLTE_Layout";
 }
 
+@section Styles {
+    @await RenderSectionAsync("Styles", required: false)
+}
+
 @RenderBody()
 
 @section Scripts {
