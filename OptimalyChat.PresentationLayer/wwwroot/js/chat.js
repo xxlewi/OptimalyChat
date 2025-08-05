@@ -259,6 +259,9 @@
 
     // Parse markdown-like formatting
     function parseMarkdown(text) {
+        // Trim leading/trailing whitespace
+        text = text.trim();
+        
         // Convert markdown to HTML for better formatting
         return text
             // Bold
