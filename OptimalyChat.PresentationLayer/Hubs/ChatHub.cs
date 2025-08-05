@@ -33,8 +33,9 @@ public class ChatHub : Hub
     /// </summary>
     public override async Task OnConnectedAsync()
     {
-        _logger.LogInformation("Client {ConnectionId} connected, User: {User}, UserIdentifier: {UserIdentifier}", 
-            Context.ConnectionId, Context.User?.Identity?.Name, Context.UserIdentifier);
+        var userId = Context.User?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+        _logger.LogInformation("Client {ConnectionId} connected, User: {User}, UserIdentifier: {UserIdentifier}, UserId from Claim: {UserId}", 
+            Context.ConnectionId, Context.User?.Identity?.Name, Context.UserIdentifier, userId);
         await base.OnConnectedAsync();
     }
 

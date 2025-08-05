@@ -4,15 +4,18 @@
 
     // SignalR connection
     let connection = null;
-    let currentProjectId = window.chatConfig.projectId;
-    let currentConversationId = window.chatConfig.conversationId;
+    let currentProjectId = null;
+    let currentConversationId = null;
     let isStreaming = false;
 
     // Initialize SignalR connection
     async function initializeSignalR() {
+        console.log('Initializing SignalR with config:', window.chatConfig);
+        
         connection = new signalR.HubConnectionBuilder()
             .withUrl(window.chatConfig.hubUrl)
             .withAutomaticReconnect()
+            .configureLogging(signalR.LogLevel.Debug)
             .build();
 
         // Connection event handlers
@@ -96,6 +99,15 @@
         } catch (err) {
             console.error('Failed to connect to SignalR:', err);
             console.error('Error details:', err.message, err.stack);
+            console.error('Full error object:', err);
+            
+            // Check if it's an authentication issue
+            if (err.message && err.message.includes('401') || err.message.includes('302')) {
+                console.error('Authentication required - user needs to log in');
+                alert('You need to log in first. Redirecting to login page...');
+                window.location.href = '/Account/Login?ReturnUrl=' + encodeURIComponent(window.location.pathname + window.location.search);
+            }
+            
             showConnectionStatus('Failed to connect', 'danger');
         }
     }
@@ -368,6 +380,16 @@
 
     // Initialize on DOM ready
     document.addEventListener('DOMContentLoaded', () => {
+        // Initialize configuration
+        if (window.chatConfig) {
+            currentProjectId = window.chatConfig.projectId;
+            currentConversationId = window.chatConfig.conversationId;
+            console.log('Chat configuration loaded:', window.chatConfig);
+        } else {
+            console.error('Chat configuration not found!');
+            return;
+        }
+        
         initializeSignalR();
         initializeEventHandlers();
         scrollToBottom();

@@ -226,7 +226,6 @@
 
 @section Scripts {
     <script src="~/js/signalr/dist/browser/signalr.min.js"></script>
-    <script src="~/js/chat.js"></script>
     <script>
         window.chatConfig = {
             hubUrl: '/chathub',
@@ -234,4 +233,5 @@
             conversationId: @(Model.CurrentConversation?.Id ?? 0)
         };
     </script>
+    <script src="~/js/chat.js"></script>
 }
